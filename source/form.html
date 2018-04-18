@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Пинк: конкурс на самое безбашенное путешествие</title>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <a class="main-nav__logo" href="index.html">
+            <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
+          </a>
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <section class="feedback">
+        <header class="feedback__intro intro">
+          <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </header>
+        <h2 class="feedback__title title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="feedback__information feedback__information--name">
+            <p class="feedback__item">
+              <label class="feedback__data" for="field-surname">Фамилия:</label>
+              <input class="feedback__input feedback__input--text" id="field-surname" type="text" name="surname" value="" placeholder="Укажите фамилию *">
+            </p>
+            <p class="feedback__item">
+              <label class="feedback__data" for="field-username">Имя:</label>
+              <input class="feedback__input feedback__input--text" id="field-username" type="text" name="username" value="" placeholder="Введите ваше имя *">
+            </p>
+            <p class="feedback__item">
+              <label class="feedback__data" for="field-patronymic">Отчество:</label>
+              <input class="feedback__input feedback__input--text" id="field-patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже">
+            </p>
+          </div>
+          <fieldset class="feedback__report feedback__report--progress">
+            <legend class="feedback__title">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="feedback__list">
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-shark" type="checkbox" name="with-a-shark" checked>
+                <label class="feedback__choice" for="field-shark">Сделал селфи с акулой</label>
+              </li>
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-beach" type="checkbox" name="on-the-beach" checked>
+                <label class="feedback__choice" for="field-beach">Обгорел на пляже</label>
+              </li>
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-star" type="checkbox" name="saw-the-star">
+                <label class="feedback__choice" for="field-star">Видел Чака Норриса</label>
+              </li>
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-souvenirs" type="checkbox" name="souvenirs">
+                <label class="feedback__choice" for="field-souvenirs">Накупил сувениров</label>
+              </li>
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-tower" type="checkbox" name="kept-tower" checked>
+                <label class="feedback__choice" for="field-tower">Удержал башню</label>
+              </li>
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-hotel" type="checkbox" name="defeated-hotel">
+                <label class="feedback__choice" for="field-hotel">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="feedback__information feedback__information--contact">
+            <p class="feedback__item">
+              <label class="feedback__data" for="field-phone">Номер телефона</label>
+              <input class="feedback__input feedback__input--text" id="field-phone" type="tel" name="phone" value="" placeholder="Номер, пожалуйста">
+            </p>
+            <p class="feedback__item">
+              <label class="feedback__data" for="field-email">Адрес почты</label>
+              <input class="feedback__input feedback__input--text" id="field-email" type="email" name="email" value="" placeholder="Введите почту *">
+            </p>
+          </div>
+          <fieldset class="feedback__report feedback__report--application">
+            <legend class="feedback__title">С каким приложением путешествовали?</legend>
+            <ul class="feedback__list">
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--radio" id="field-ios" type="radio" name="application" value="for-ios" checked>
+                <label class="feedback__choice" for="field-ios">Pink для iOS</label>
+              </li>
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--radio" id="field-android" type="radio" name="application" value="for-android">
+                <label class="feedback__choice" for="field-android">Pink на Android</label>
+              </li>
+              <li class="feedback__option">
+                <input class="visually-hidden feedback__input feedback__input--radio" id="field-windows-phone" type="radio" name="application" value="windows-phone">
+                <label class="feedback__choice" for="field-windows-phone">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="feedback__report feedback__report--message">
+            <legend class="feedback__title feedback__title--message">Опишите свои эмоции</legend>
+            <label for="field-message"></label>
+            <textarea class="feedback__message" id="field-message" name="message">Можно прям в красках, не стесняясь в выражениях</textarea>
+          </fieldset>
+          <div class="feedback__post">
+            <button class="feedback__button" type="submit">Отправить форму</button>
+            <p class="feedback__necessary"><sup>*</sup> — обязательные поля</p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Pink">
+      </a>
+      <div class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <img class="copyright__logo-image" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>
