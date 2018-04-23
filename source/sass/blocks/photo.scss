@@ -1,0 +1,83 @@
+.photo {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.photo__intro {
+  padding: 100px 20px 0;
+}
+
+.photo__title {
+  @include font(400, 14px, 30px);
+  margin: 0;
+  padding: 47px 35px;
+
+  text-align: center;
+  color: $blue;
+}
+
+.photo__panorama {
+  display: block;
+}
+
+.photo__list {
+  @include resetList;
+}
+
+.photo__item {
+  margin: 0 20px 20px;
+}
+
+.photo__image {
+  display: block;
+}
+
+.photo__info {
+  padding: 17px 20px 22px;
+
+  color: $blue;
+
+  background-color: $greyLight;
+
+  &--panorama {
+    margin: 0 20px 20px;
+  }
+}
+
+.photo__author {
+  @include font(700, 14px, 24px);
+}
+
+.photo__date {
+  @include font(300, 12px, 24px);
+  text-transform: uppercase;
+}
+
+.photo__text {
+  @include font(400, 14px, 24px);
+  margin: 0;
+  padding-bottom: 12px;
+}
+
+.photo__rating {
+  @include font(400, 12px, 24px);
+  position: relative;
+
+  margin: 0;
+  padding-left: 30px;
+
+  color: $pink;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    width: 13px;
+    height: 12px;
+
+    background: url("../img/icon-heart.svg") no-repeat 0 0;
+  }
+}

@@ -1,0 +1,21 @@
+.intro {
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 237px;
+  margin: 0 auto;
+
+  background: $blueDark url("../img/bg-back-mobile@1x.jpg") no-repeat 0 0;
+}
+
+.intro__title {
+  @include font(300, 24px);
+  margin: 0;
+
+  text-align: center;
+  color: $white;
+}
+
+.intro__image {
+  display: block;
+  padding-top: 175px;
+}

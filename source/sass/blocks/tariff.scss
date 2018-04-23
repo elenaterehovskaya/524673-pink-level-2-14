@@ -1,0 +1,110 @@
+.tariff {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.tariff__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.tariff__list {
+  width: 840px;
+  margin-left: -260px;
+
+  border-collapse: collapse;
+}
+
+.tariff__item {
+  position: relative;
+
+  color: $white;
+
+  background-color: $blue;
+  border: 2px solid $blue;
+  border-top: none;
+
+  &:nth-child(-n+3) {
+    border-right: 2px solid $greyLight;
+  }
+
+  &:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 74px;
+    height: 73px;
+
+    background: url("../img/bg-hit.svg") no-repeat 0 0;
+  }
+
+  &:nth-child(2)::after {
+    @include font(400, 14px);
+    content: "хит";
+    position: absolute;
+    top: 18px;
+    left: 11px;
+
+    text-transform: uppercase;
+
+    transform: rotate(-45deg);
+  }
+}
+
+.tariff__name {
+  @include font(700, 18px);
+  margin: 0;
+  padding: 21px 0 7px;
+
+  text-transform: uppercase;
+}
+
+.tariff__price {
+  @include font(300, 24px);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.tariff__option {
+  @include font(400, 14px);
+  position: relative;
+
+  padding: 21px;
+
+  color: $blue;
+  text-transform: uppercase;
+
+  background-color: $white;
+  border: 2px solid $greyDark;
+  border-top: none;
+
+  &:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 17px;
+
+    width: 31px;
+    height: 21px;
+
+    background: url("../img/icon-yes.svg") no-repeat 0 0;
+    background-size: cover;
+  }
+}
+
+.tariff__smiley .tariff__option:nth-child(2)::after {
+  width: 27px;
+  height: 27px;
+
+  background: url("../img/icon-no.svg") no-repeat 0 0;
+}
+
+.tariff__comments .tariff__option:nth-child(-n+3)::after {
+  width: 27px;
+  height: 27px;
+
+  background: url("../img/icon-no.svg") no-repeat 0 0;
+}

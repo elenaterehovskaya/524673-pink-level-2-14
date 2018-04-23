@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -35,6 +37,7 @@
       <h1 class="visually-hidden">Мобильное приложение Пинк</h1>
 
       <section class="intro">
+        <img class="intro__image" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Логотип Microsoft">
         <h2 class="visually-hidden">Установка приложения</h2>
         <div class="intro__application application">
           <a class="application__button button" href="https://www.apple.com/ru/itunes/" target="_blank">Скачать приложение</a>
@@ -61,8 +64,8 @@
 
       <section class="advantages">
         <h2 class="visually-hidden">Возможности приложения</h2>
-        <p class="advantages__slogan slogan">Устали от серости мегаполиса?</p>
-        <p class="advantages__slogan slogan">Нам есть, что вам<br> предложить!</p>
+        <p class="advantages__slogan">Устали от серости мегаполиса?</p>
+        <p class="advantages__slogan">Нам есть, что вам<br> предложить!</p>
         <div class="advantages__info">
           <ul class="advantages__list">
             <li class="advantages__item">
@@ -90,11 +93,11 @@
               <p class="reviews__author">Николай Петров</p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
-            <li class="reviews__item">
+            <li class="visually-hidden reviews__item">
               <p class="reviews__author">Николай Петров</p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
-            <li class="reviews__item">
+            <li class="visually-hidden reviews__item">
               <p class="reviews__author">Николай Петров</p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
@@ -106,18 +109,18 @@
         <div class="tariff__wrapper">
           <h2 class="visually-hidden">Выбор тарифного плана приложения</h2>
           <table class="tariff__list">
-            <tr class="tariff__plan">
-              <th class="tariff__item">
+            <tr>
+              <th class="tariff__item slider__item">
+                <p class="tariff__name">База</p>
+                <p class="tariff__price">1,99 USD</p>
+              </th>
+              <th class="tariff__item slider__item">
                 <p class="tariff__name">Стандарт</p>
                 <p class="tariff__price">3,99 USD</p>
               </th>
-              <th class="tariff__item">
-                <p class="tariff__name">Стандарт</p>
-                <p class="tariff__price">3,99 USD</p>
-              </th>
-              <th class="tariff__item">
-                <p class="tariff__name">Стандарт</p>
-                <p class="tariff__price">3,99 USD</p>
+              <th class="tariff__item slider__item">
+                <p class="tariff__name">Анлим</p>
+                <p class="tariff__price">9,99 USD</p>
               </th>
             </tr>
             <tr class="tariff__filter">
@@ -141,7 +144,7 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <p class="contacts__slogan slogan">Остались вопросы?<br> Свяжитесь с нами!</p>
+        <p class="contacts__slogan">Остались вопросы?<br> Свяжитесь с нами!</p>
         <ul class="contacts__list">
           <li class="contacts__item">
             <p class="contacts__title">Звоните:</p>

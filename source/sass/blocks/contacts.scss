@@ -1,0 +1,42 @@
+.contacts {
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.contacts__slogan {
+  @include font(300, 24px, 1.2em);
+  margin: 0;
+
+  color: $blue;
+}
+
+.contacts__list {
+  @include resetList;
+}
+
+.contacts__item {
+  margin-top: 20px;
+}
+
+.contacts__title {
+  @include font(700, 18px);
+  margin: 0;
+  padding-bottom: 7px;
+
+  color: $blue;
+}
+
+.contacts__text {
+  @include font(300, 24px);
+  margin: 0;
+
+  color: $pink;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 240px;
+  margin-top: 40px;
+  overflow: hidden;
+}

@@ -1,0 +1,10 @@
+.button {
+  @include font(700, 18px, 18px);
+  display: block;
+  padding: 16px 0;
+
+  text-decoration: none;
+
+  background-color: transparent;
+  border-radius: 30px;
+}

@@ -1,0 +1,64 @@
+.feedback {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.feedback__intro {
+  padding: 100px 20px 0;
+}
+
+.feedback__title {
+  @include font(400, 14px, 30px);
+  margin: 0;
+  padding: 47px 20px 0;
+
+  text-align: center;
+  color: $blue;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.feedback__info {
+  margin-top: 25px;
+  margin-bottom: 45px;
+}
+
+.feedback__post {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.feedback__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $green;
+  border: none;
+  border-radius: 2px;
+}
+
+.feedback__necessary {
+  margin: 0;
+  padding-top: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: $blue;
+  text-transform: uppercase;
+}

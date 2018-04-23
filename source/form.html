@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Пинк: конкурс на самое безбашенное путешествие</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -37,83 +39,89 @@
         <header class="feedback__intro intro">
           <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </header>
-        <h2 class="feedback__title title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+        <h2 class="feedback__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
         <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="feedback__information feedback__information--name">
-            <p class="feedback__item">
-              <label class="feedback__data" for="field-surname">Фамилия:</label>
-              <input class="feedback__input feedback__input--text" id="field-surname" type="text" name="surname" value="" placeholder="Укажите фамилию *">
+
+          <div class="feedback__info feedback__info--name form-info">
+            <p class="form-info__item">
+              <label class="form-info__data" for="field-surname">Фамилия:</label>
+              <input class="form-info__input" id="field-surname" type="text" name="surname" value="" placeholder="Укажите фамилию *">
             </p>
-            <p class="feedback__item">
-              <label class="feedback__data" for="field-username">Имя:</label>
-              <input class="feedback__input feedback__input--text" id="field-username" type="text" name="username" value="" placeholder="Введите ваше имя *">
+            <p class="form-info__item">
+              <label class="form-info__data" for="field-username">Имя:</label>
+              <input class="form-info__input" id="field-username" type="text" name="username" value="" placeholder="Введите ваше имя *">
             </p>
-            <p class="feedback__item">
-              <label class="feedback__data" for="field-patronymic">Отчество:</label>
-              <input class="feedback__input feedback__input--text" id="field-patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже">
+            <p class="form-info__item">
+              <label class="form-info__data" for="field-patronymic">Отчество:</label>
+              <input class="form-info__input" id="field-patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже">
             </p>
           </div>
-          <fieldset class="feedback__report feedback__report--progress">
-            <legend class="feedback__title">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="feedback__list">
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-shark" type="checkbox" name="with-a-shark" checked>
-                <label class="feedback__choice" for="field-shark">Сделал селфи с акулой</label>
+
+          <fieldset class="feedback__report feedback__report--progress form-report">
+            <legend class="form-report__caption">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="form-report__list">
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-shark" type="checkbox" name="with-a-shark" checked>
+                <label class="form-report__choice" for="field-shark">Сделал селфи с акулой</label>
               </li>
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-beach" type="checkbox" name="on-the-beach" checked>
-                <label class="feedback__choice" for="field-beach">Обгорел на пляже</label>
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-beach" type="checkbox" name="on-the-beach" checked>
+                <label class="form-report__choice" for="field-beach">Обгорел на пляже</label>
               </li>
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-star" type="checkbox" name="saw-the-star">
-                <label class="feedback__choice" for="field-star">Видел Чака Норриса</label>
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-star" type="checkbox" name="saw-the-star">
+                <label class="form-report__choice" for="field-star">Видел Чака Норриса</label>
               </li>
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-souvenirs" type="checkbox" name="souvenirs">
-                <label class="feedback__choice" for="field-souvenirs">Накупил сувениров</label>
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-souvenirs" type="checkbox" name="souvenirs">
+                <label class="form-report__choice" for="field-souvenirs">Накупил сувениров</label>
               </li>
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-tower" type="checkbox" name="kept-tower" checked>
-                <label class="feedback__choice" for="field-tower">Удержал башню</label>
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-tower" type="checkbox" name="kept-tower" checked>
+                <label class="form-report__choice" for="field-tower">Удержал башню</label>
               </li>
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--checkbox" id="field-hotel" type="checkbox" name="defeated-hotel">
-                <label class="feedback__choice" for="field-hotel">Разгромил отель</label>
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-hotel" type="checkbox" name="defeated-hotel">
+                <label class="form-report__choice" for="field-hotel">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
-          <div class="feedback__information feedback__information--contact">
-            <p class="feedback__item">
-              <label class="feedback__data" for="field-phone">Номер телефона</label>
-              <input class="feedback__input feedback__input--text" id="field-phone" type="tel" name="phone" value="" placeholder="Номер, пожалуйста">
+
+          <div class="feedback__info feedback__info--contact form-info">
+            <p class="form-info__item">
+              <label class="form-info__data" for="field-phone">Номер телефона</label>
+              <input class="form-info__input" id="field-phone" type="tel" name="phone" value="" placeholder="Номер, пожалуйста">
             </p>
-            <p class="feedback__item">
-              <label class="feedback__data" for="field-email">Адрес почты</label>
-              <input class="feedback__input feedback__input--text" id="field-email" type="email" name="email" value="" placeholder="Введите почту *">
+            <p class="form-info__item">
+              <label class="form-info__data" for="field-email">Адрес почты</label>
+              <input class="form-info__input" id="field-email" type="email" name="email" value="" placeholder="Введите почту *">
             </p>
           </div>
-          <fieldset class="feedback__report feedback__report--application">
-            <legend class="feedback__title">С каким приложением путешествовали?</legend>
-            <ul class="feedback__list">
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--radio" id="field-ios" type="radio" name="application" value="for-ios" checked>
-                <label class="feedback__choice" for="field-ios">Pink для iOS</label>
+
+          <fieldset class="feedback__report feedback__report--application form-report">
+            <legend class="form-report__caption">С каким приложением путешествовали?</legend>
+            <ul class="form-report__list">
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--radio" id="field-ios" type="radio" name="application" value="for-ios" checked>
+                <label class="form-report__choice" for="field-ios">Pink для iOS</label>
               </li>
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--radio" id="field-android" type="radio" name="application" value="for-android">
-                <label class="feedback__choice" for="field-android">Pink на Android</label>
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--radio" id="field-android" type="radio" name="application" value="for-android">
+                <label class="form-report__choice" for="field-android">Pink на Android</label>
               </li>
-              <li class="feedback__option">
-                <input class="visually-hidden feedback__input feedback__input--radio" id="field-windows-phone" type="radio" name="application" value="windows-phone">
-                <label class="feedback__choice" for="field-windows-phone">Windows Phone</label>
+              <li class="form-report__item">
+                <input class="visually-hidden form-report__input form-report__input--radio" id="field-windows-phone" type="radio" name="application" value="windows-phone">
+                <label class="form-report__choice" for="field-windows-phone">Windows Phone</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="feedback__report feedback__report--message">
-            <legend class="feedback__title feedback__title--message">Опишите свои эмоции</legend>
+
+          <fieldset class="feedback__message form-message">
+            <legend class="form-message__caption">Опишите свои эмоции</legend>
             <label for="field-message"></label>
-            <textarea class="feedback__message" id="field-message" name="message">Можно прям в красках, не стесняясь в выражениях</textarea>
+            <textarea class="form-message__text" id="field-message" name="message">Можно прям в красках, не стесняясь в выражениях</textarea>
           </fieldset>
+
           <div class="feedback__post">
             <button class="feedback__button" type="submit">Отправить форму</button>
             <p class="feedback__necessary"><sup>*</sup> — обязательные поля</p>

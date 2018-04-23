@@ -1,0 +1,92 @@
+.form-report {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: $greyLight;
+}
+
+.form-report__caption {
+  @include font(400, 14px, 18px);
+  margin: 0;
+  padding: 35px 40px 40px;
+
+  text-align: center;
+  color: $pink;
+  text-transform: uppercase;
+
+  background-color: $greyLight;
+}
+
+.form-report__list {
+  @include resetList;
+}
+
+.form-report__item {
+  margin-bottom: 60px;
+}
+
+.form-report__choice {
+  position: relative;
+
+  display: block;
+  padding-left: 80px;
+
+  font: inherit;
+  font-size: 18px;
+  color: $blue;
+
+  cursor: pointer;
+}
+
+.form-report__input--checkbox + .form-report__choice::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: $white;
+  border: 2px solid $greyDark;
+}
+
+.form-report__input--checkbox:checked + .form-report__choice::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30px;
+
+  width: 22px;
+  height: 16px;
+
+  background: url("../img/icon-yes.svg") no-repeat 0 0;
+}
+
+.form-report__input--radio + .form-report__choice::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+
+  width: 36px;
+  height: 36px;
+
+  background-color: $white;
+  border: 2px solid $greyDark;
+  border-radius: 50%;
+}
+
+.form-report__input--radio:checked + .form-report__choice::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 32px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $pink;
+  border-radius: 50%;
+}
