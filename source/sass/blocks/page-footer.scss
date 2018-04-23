@@ -1,0 +1,19 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 320px;
+  min-height: 255px;
+  margin: 0 auto;
+}
+
+.page-footer__logo-image {
+  display: block;
+  margin-bottom: 36px;
+}
+
+.page-footer__social,
+.page-footer__copyright {
+  margin-bottom: 36px;
+}

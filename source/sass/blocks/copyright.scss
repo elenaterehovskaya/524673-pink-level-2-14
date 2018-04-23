@@ -1,0 +1,11 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 130px;
+}
+
+.copyright__text {
+  @include font(400, 14px, 18px);
+  color: $blue;
+}
