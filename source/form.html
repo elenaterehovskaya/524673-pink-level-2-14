@@ -9,23 +9,23 @@
 
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo" href="index.html">
             <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
           </a>
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
+            <li>
               <a class="site-list__link" href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li>
               <a class="site-list__link" href="photo.html">Фотографии</a>
             </li>
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">Конкурс</a>
+            <li>
+              <a class="site-list__link site-list__link--active">Конкурс</a>
             </li>
-            <li class="site-list__item">
+            <li>
               <a class="site-list__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
             </li>
           </ul>
@@ -39,79 +39,80 @@
         <header class="feedback__intro intro">
           <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </header>
-        <h2 class="feedback__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+        <h2 class="feedback__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></h2>
         <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
 
-          <div class="feedback__info feedback__info--name form-info">
+          <div class="feedback__info form-info form-info--name">
             <p class="form-info__item">
-              <label class="form-info__data" for="field-surname">Фамилия:</label>
+              <label class="form-info__label" for="field-surname">Фамилия:</label>
               <input class="form-info__input" id="field-surname" type="text" name="surname" value="" placeholder="Укажите фамилию *">
             </p>
             <p class="form-info__item">
-              <label class="form-info__data" for="field-username">Имя:</label>
+              <label class="form-info__label" for="field-username">Имя:</label>
               <input class="form-info__input" id="field-username" type="text" name="username" value="" placeholder="Введите ваше имя *">
             </p>
             <p class="form-info__item">
-              <label class="form-info__data" for="field-patronymic">Отчество:</label>
+              <label class="form-info__label" for="field-patronymic">Отчество:</label>
               <input class="form-info__input" id="field-patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже">
             </p>
           </div>
 
-          <fieldset class="feedback__report feedback__report--progress form-report">
+          <fieldset class="feedback__report form-report form-report--progress">
             <legend class="form-report__caption">Ваши безбашенные достижения в путешествии</legend>
             <ul class="form-report__list">
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-shark" type="checkbox" name="with-a-shark" checked>
-                <label class="form-report__choice" for="field-shark">Сделал селфи с акулой</label>
+                <label class="form-report__label" for="field-shark">Сделал селфи с акулой</label>
               </li>
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-beach" type="checkbox" name="on-the-beach" checked>
-                <label class="form-report__choice" for="field-beach">Обгорел на пляже</label>
+                <label class="form-report__label" for="field-beach">Обгорел на пляже</label>
               </li>
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-star" type="checkbox" name="saw-the-star">
-                <label class="form-report__choice" for="field-star">Видел Чака Норриса</label>
+                <label class="form-report__label" for="field-star">Видел Чака Норриса</label>
               </li>
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-souvenirs" type="checkbox" name="souvenirs">
-                <label class="form-report__choice" for="field-souvenirs">Накупил сувениров</label>
+                <label class="form-report__label" for="field-souvenirs">Накупил сувениров</label>
               </li>
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-tower" type="checkbox" name="kept-tower" checked>
-                <label class="form-report__choice" for="field-tower">Удержал башню</label>
+                <label class="form-report__label" for="field-tower">Удержал башню</label>
               </li>
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-hotel" type="checkbox" name="defeated-hotel">
-                <label class="form-report__choice" for="field-hotel">Разгромил отель</label>
+                <label class="form-report__label" for="field-hotel">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
 
-          <div class="feedback__info feedback__info--contact form-info">
+          <fieldset class="feedback__info form-info form-info--contact">
+            <legend class="form-info__caption">Контактная информация</legend>
             <p class="form-info__item">
-              <label class="form-info__data" for="field-phone">Номер телефона</label>
+              <label class="form-info__label" for="field-phone">Номер телефона</label>
               <input class="form-info__input" id="field-phone" type="tel" name="phone" value="" placeholder="Номер, пожалуйста">
             </p>
             <p class="form-info__item">
-              <label class="form-info__data" for="field-email">Адрес почты</label>
+              <label class="form-info__label" for="field-email">Адрес почты</label>
               <input class="form-info__input" id="field-email" type="email" name="email" value="" placeholder="Введите почту *">
             </p>
-          </div>
+          </fieldset>
 
-          <fieldset class="feedback__report feedback__report--application form-report">
+          <fieldset class="feedback__report form-report form-report--application">
             <legend class="form-report__caption">С каким приложением путешествовали?</legend>
             <ul class="form-report__list">
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--radio" id="field-ios" type="radio" name="application" value="for-ios" checked>
-                <label class="form-report__choice" for="field-ios">Pink для iOS</label>
+                <label class="form-report__label" for="field-ios">Pink для iOS</label>
               </li>
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--radio" id="field-android" type="radio" name="application" value="for-android">
-                <label class="form-report__choice" for="field-android">Pink на Android</label>
+                <label class="form-report__label" for="field-android">Pink на Android</label>
               </li>
               <li class="form-report__item">
                 <input class="visually-hidden form-report__input form-report__input--radio" id="field-windows-phone" type="radio" name="application" value="windows-phone">
-                <label class="form-report__choice" for="field-windows-phone">Windows Phone</label>
+                <label class="form-report__label" for="field-windows-phone">Windows Phone</label>
               </li>
             </ul>
           </fieldset>
@@ -124,7 +125,7 @@
 
           <div class="feedback__post">
             <button class="feedback__button" type="submit">Отправить форму</button>
-            <p class="feedback__necessary"><sup>*</sup> — обязательные поля</p>
+            <p class="feedback__necessary"><sup>*</sup> — обязательные <span>для заполнения</span> поля</p>
           </div>
         </form>
       </section>
@@ -161,6 +162,8 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/menu.js"></script>
 
   </body>
 </html>

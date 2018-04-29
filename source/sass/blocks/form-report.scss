@@ -1,36 +1,46 @@
 .form-report {
   margin: 0;
+  margin-top: 40px;
   padding: 0;
 
   border: none;
   background-color: $greyLight;
+
+  @include tablet {
+    background-color: transparent;
+    border: 2px solid $greyDark;
+  }
 }
 
 .form-report__caption {
   @include font(400, 14px, 18px);
   margin: 0;
-  padding: 35px 40px 40px;
+  padding: 30px;
 
   text-align: center;
   color: $pink;
   text-transform: uppercase;
 
   background-color: $greyLight;
+
+  @include tablet {
+    background-color: transparent;
+  }
 }
 
 .form-report__list {
-  @include resetList;
+  @include list-reset;
 }
 
 .form-report__item {
   margin-bottom: 60px;
 }
 
-.form-report__choice {
+.form-report__label {
   position: relative;
 
   display: block;
-  padding-left: 80px;
+  padding-left: 90px;
 
   font: inherit;
   font-size: 18px;
@@ -39,7 +49,7 @@
   cursor: pointer;
 }
 
-.form-report__input--checkbox + .form-report__choice::before {
+.form-report__input--checkbox + .form-report__label::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -52,7 +62,7 @@
   border: 2px solid $greyDark;
 }
 
-.form-report__input--checkbox:checked + .form-report__choice::after {
+.form-report__input--checkbox:checked + .form-report__label::after {
   content: "";
   position: absolute;
   top: 0;
@@ -64,7 +74,7 @@
   background: url("../img/icon-yes.svg") no-repeat 0 0;
 }
 
-.form-report__input--radio + .form-report__choice::before {
+.form-report__input--radio + .form-report__label::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -78,7 +88,7 @@
   border-radius: 50%;
 }
 
-.form-report__input--radio:checked + .form-report__choice::after {
+.form-report__input--radio:checked + .form-report__label::after {
   content: "";
   position: absolute;
   top: 2px;
@@ -89,4 +99,36 @@
 
   background-color: $pink;
   border-radius: 50%;
+}
+
+.form-report--progress {
+  @include tablet {
+    order: 4;
+    padding: 0 60px;
+  }
+
+  @include desktop {
+    width: 100%;
+
+    & .form-report__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    & .form-report__item {
+      width: (100% / 3);
+    }
+  }
+}
+
+.form-report--application {
+  @include tablet {
+    order: 2;
+  }
+
+  @include desktop {
+    margin-top: 35px;
+    width: 435px;
+  }
 }

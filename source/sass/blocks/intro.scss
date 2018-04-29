@@ -1,21 +1,54 @@
 .intro {
+  position: relative;
+  z-index: -1;
+
   box-sizing: border-box;
   width: 320px;
   min-height: 237px;
   margin: 0 auto;
+  padding-top: 100px;
 
   background: $blueDark url("../img/bg-back-mobile@1x.jpg") no-repeat 0 0;
+
+  @include tablet {
+    width: 660px;
+    min-height: 440px;
+    padding-top: 175px;
+
+    background: $blueDark;
+  }
+
+  @include desktop {
+    width: auto;
+    min-height: 395px;
+  }
 }
 
 .intro__title {
   @include font(300, 24px);
-  margin: 0;
+  max-width: 280px;
+  margin: 0 auto;
 
   text-align: center;
   color: $white;
+
+  @include tablet {
+    max-width: 520px;
+    font-size: 50px;
+  }
+
+  @include desktop {
+    max-width: 780px;
+  }
 }
 
 .intro__image {
   display: block;
   padding-top: 175px;
+
+  @include tablet {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+  }
 }

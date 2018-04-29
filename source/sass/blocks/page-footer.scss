@@ -4,8 +4,28 @@
   justify-content: flex-start;
   align-items: center;
   width: 320px;
-  min-height: 255px;
   margin: 0 auto;
+
+  &--hidden {
+    display: none;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    height: 128px;
+
+    &--hidden {
+      display: flex;
+    }
+  }
+
+  @include desktop {
+    width: 940px;
+    height: 200px;
+    padding: 0 10px;
+  }
 }
 
 .page-footer__logo-image {

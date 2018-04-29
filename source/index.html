@@ -9,23 +9,23 @@
 
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo">
             <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
           </a>
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">Главная</a>
+            <li>
+              <a class="site-list__link site-list__link--active">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li>
               <a class="site-list__link" href="photo.html">Фотографии</a>
             </li>
-            <li class="site-list__item">
+            <li>
               <a class="site-list__link" href="form.html">Конкурс</a>
             </li>
-            <li class="site-list__item">
+            <li>
               <a class="site-list__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
             </li>
           </ul>
@@ -38,8 +38,8 @@
 
       <section class="intro">
         <img class="intro__image" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Логотип Microsoft">
-        <h2 class="visually-hidden">Установка приложения</h2>
         <div class="intro__application application">
+          <h2 class="application__title">Взгляните на&#160;жизнь иначе!</h2>
           <a class="application__button button" href="https://www.apple.com/ru/itunes/" target="_blank">Скачать приложение</a>
           <ul class="application__list">
             <li class="application__item">
@@ -66,39 +66,55 @@
         <h2 class="visually-hidden">Возможности приложения</h2>
         <p class="advantages__slogan">Устали от серости мегаполиса?</p>
         <p class="advantages__slogan">Нам есть, что вам<br> предложить!</p>
-        <div class="advantages__info">
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <h3 class="advantages__title">Поднимает настроение</h3>
-              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Заводит новых друзей</h3>
-              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-              <img class="advantages__photo" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iPhone: Всем привет!">
-            </li>
-          </ul>
-        </div>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h3 class="advantages__title">Поднимает настроение</h3>
+            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Меняет мир вокруг</h3>
+            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br> усилить эффект</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Заводит новых друзей</h3>
+            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+        <img class="advantages__photo" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iPhone: Всем привет!">
       </section>
+
+      <article class="research">
+        <h1 class="visually-hidden">Исследование британских ученых</h1>
+        <div class="research__wrapper">
+          <div class="research__diagram">24</div>
+          <section class="research__info">
+            <h2 class="research__title">Эффект<br> на 24 часа!</h2>
+            <p class="research__text">Британские ученые провели исследования и&#160;доказали, что&#160;положительный эффект от&#160;использования приложения длится целые сутки!</p>
+            <a class="research__link" href="#">Узнать больше об исследовании</a>
+          </section>
+        </div>
+      </article>
 
       <section class="reviews">
         <div class="reviews__wrapper">
           <h2 class="visually-hidden">Отзывы о приложении</h2>
           <ul class="reviews__list">
             <li class="reviews__item">
-              <p class="reviews__author">Николай Петров</p>
+              <p class="reviews__author">Николай Петров
+                <span>25 лет, водитель трамвая</span>
+              </p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
             <li class="visually-hidden reviews__item">
-              <p class="reviews__author">Николай Петров</p>
+              <p class="reviews__author">Николай Петров
+                <span>25 лет, водитель трамвая</span>
+              </p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
             <li class="visually-hidden reviews__item">
-              <p class="reviews__author">Николай Петров</p>
+              <p class="reviews__author">Николай Петров
+                <span>25 лет, водитель трамвая</span>
+              </p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
           </ul>
@@ -108,8 +124,9 @@
       <section class="tariff">
         <div class="tariff__wrapper">
           <h2 class="visually-hidden">Выбор тарифного плана приложения</h2>
-          <table class="tariff__list">
+          <table class="tariff__list slider__list">
             <tr>
+              <th class="tariff__item"></th>
               <th class="tariff__item slider__item">
                 <p class="tariff__name">База</p>
                 <p class="tariff__price">1,99 USD</p>
@@ -125,18 +142,39 @@
             </tr>
             <tr class="tariff__filter">
               <td class="tariff__option">Розовый фильтр</td>
-              <td class="tariff__option">Розовый фильтр</td>
-              <td class="tariff__option">Розовый фильтр</td>
+              <td class="tariff__option">
+                <span>Розовый фильтр</span>
+              </td>
+              <td class="tariff__option">
+                <span>Розовый фильтр</span>
+              </td>
+              <td class="tariff__option">
+                <span>Розовый фильтр</span>
+              </td>
             </tr>
             <tr class="tariff__smiley">
               <td class="tariff__option">Смайлики</td>
-              <td class="tariff__option">Смайлики</td>
-              <td class="tariff__option">Смайлики</td>
+              <td class="tariff__option">
+                <span>Смайлики</span>
+              </td>
+              <td class="tariff__option">
+                <span>Смайлики</span>
+              </td>
+              <td class="tariff__option">
+                <span>Смайлики</span>
+              </td>
             </tr>
             <tr class="tariff__comments">
               <td class="tariff__option">Комментарии</td>
-              <td class="tariff__option">Комментарии</td>
-              <td class="tariff__option">Комментарии</td>
+              <td class="tariff__option">
+                <span>Комментарии</span>
+              </td>
+              <td class="tariff__option">
+                <span>Комментарии</span>
+              </td>
+              <td class="tariff__option">
+                <span>Комментарии</span>
+              </td>
             </tr>
           </table>
         </div>
@@ -164,6 +202,40 @@
         </div>
       </section>
     </main>
+
+    <footer class="page-footer page-footer--hidden">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Pink">
+      </a>
+      <div class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <img class="copyright__logo-image" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
 
   </body>
 </html>
