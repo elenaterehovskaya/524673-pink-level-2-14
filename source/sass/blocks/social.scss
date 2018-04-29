@@ -3,7 +3,7 @@
 }
 
 .social__list {
-  @include resetList;
+  @include list-reset;
   display: flex;
   justify-content: space-between;
   align-items: center;

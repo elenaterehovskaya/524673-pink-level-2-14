@@ -3,9 +3,21 @@
   justify-content: space-between;
   align-items: center;
   min-width: 130px;
+
+  @include desktop {
+    width: 150px;
+  }
 }
 
 .copyright__text {
   @include font(400, 14px, 18px);
   color: $blue;
+
+  @include desktop {
+    font-size: 18px;
+  }
+}
+
+.copyright__logo-image {
+  display: block;
 }

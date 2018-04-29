@@ -1,12 +1,32 @@
 .tariff {
-  margin-top: 25px;
   margin-bottom: 40px;
+
+  @include tablet {
+    margin-top: 10px;
+    margin-bottom: 45px;
+  }
+
+  @include desktop {
+    margin-top: 35px;
+    margin-bottom: 65px;
+  }
 }
 
 .tariff__wrapper {
   width: 320px;
   margin: 0 auto;
+  padding: 103px 0 50px;
   overflow-x: hidden;
+
+  @include tablet {
+    width: 620px;
+    padding: 100px 20px 70px;
+  }
+
+  @include desktop {
+    width: 940px;
+    padding: 155px 10px 90px;
+  }
 }
 
 .tariff__list {
@@ -14,6 +34,11 @@
   margin-left: -260px;
 
   border-collapse: collapse;
+
+  @include tablet {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .tariff__item {
@@ -25,11 +50,15 @@
   border: 2px solid $blue;
   border-top: none;
 
+  &:first-child {
+    display: none;
+  }
+
   &:nth-child(-n+3) {
     border-right: 2px solid $greyLight;
   }
 
-  &:nth-child(2)::before {
+  &:nth-child(3)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -41,38 +70,75 @@
     background: url("../img/bg-hit.svg") no-repeat 0 0;
   }
 
-  &:nth-child(2)::after {
-    @include font(400, 14px);
+  &:nth-child(3)::after {
     content: "хит";
     position: absolute;
     top: 18px;
     left: 11px;
 
+    font-weight: 400;
+    font-size: 14px;
     text-transform: uppercase;
 
     transform: rotate(-45deg);
   }
+
+  @include tablet {
+    width: (100% / 4);
+
+    &:first-child {
+      display: table-cell;
+
+      background-color: transparent;
+      border-bottom: 2px solid $greyDark;
+      border-left: none;
+    }
+  }
+
+  @include tablet-only {
+    &:nth-child(3)::before {
+      width: 61px;
+      height: 61px;
+
+      background: url("../img/bg-hit-tablet.svg") no-repeat 0 0;
+    }
+
+    &:nth-child(3)::after {
+      top: 15px;
+      left: 6px;
+    }
+  }
 }
 
 .tariff__name {
-  @include font(700, 18px);
+  @include font(700, 18px, 30px);
   margin: 0;
-  padding: 21px 0 7px;
+  padding: 15px 0 5px;
 
   text-transform: uppercase;
+
+  @include tablet-only {
+    font-size: 16px;
+  }
 }
 
 .tariff__price {
-  @include font(300, 24px);
+  @include font(300, 24px, 30px);
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 17px;
+
+  @include tablet-only {
+    padding-bottom: 12px;
+
+    font-size: 18px;
+  }
 }
 
 .tariff__option {
-  @include font(400, 14px);
+  @include font(400, 14px, 30px);
   position: relative;
 
-  padding: 21px;
+  padding: 15px 20px;
 
   color: $blue;
   text-transform: uppercase;
@@ -80,6 +146,10 @@
   background-color: $white;
   border: 2px solid $greyDark;
   border-top: none;
+
+  &:first-child {
+    display: none;
+  }
 
   &:not(:first-child)::after {
     content: "";
@@ -92,6 +162,32 @@
 
     background: url("../img/icon-yes.svg") no-repeat 0 0;
     background-size: cover;
+  }
+
+  @include tablet {
+    padding: 14px;
+
+    text-transform: none;
+
+    &:first-child {
+      display: table-cell;
+    }
+
+    &:not(:first-child)::after {
+      top: 10px;
+      right: 60px;
+    }
+  }
+
+  @include desktop {
+    padding: 20px;
+
+    font-size: 18px;
+
+    &:not(:first-child)::after {
+      top: 18px;
+      right: 100px;
+    }
   }
 }
 
@@ -107,4 +203,21 @@
   height: 27px;
 
   background: url("../img/icon-no.svg") no-repeat 0 0;
+}
+
+.tariff__toggles {
+  margin: 0;
+  padding-top: 30px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.tariff__filter span,
+.tariff__smiley span,
+.tariff__comments span {
+  @include tablet {
+    display: none;
+  }
 }

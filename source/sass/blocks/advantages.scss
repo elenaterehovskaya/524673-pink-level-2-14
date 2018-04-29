@@ -5,18 +5,71 @@
   overflow-y: hidden;
 
   text-align: center;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    width: 620px;
+  }
+
+  @include desktop {
+    width: 940px;
+  }
 }
 
 .advantages__slogan {
-  @include font(300, 24px, 1.2em);
+  @include font(300, 24px);
+  width: 100%;
   margin: 0;
   padding-top: 36px;
 
   color: $blue;
+
+  @include tablet {
+    padding-top: 45px;
+
+    font-size: 40px;
+
+    &:last-of-type {
+      padding-top: 0;
+    }
+  }
+
+  @include desktop {
+    padding-top: 70px;
+
+    font-size: 50px;
+  }
 }
 
 .advantages__list {
-  @include resetList;
+  @include list-reset;
+
+  @include tablet {
+    order: 2;
+    width: (100% / 2);
+
+    text-align: left;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    text-align: center;
+  }
+}
+
+.advantages__item {
+  @include desktop {
+    width: (100% / 3);
+    padding: 0 37px;
+  }
 }
 
 .advantages__title {
@@ -25,6 +78,11 @@
   padding-top: 36px;
 
   color: $black;
+
+  @include desktop {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .advantages__description {
@@ -33,9 +91,41 @@
   padding-top: 10px;
 
   color: $blue;
+
+  & br {
+    display: none;
+  }
+
+  @include tablet {
+    padding-top: 12px;
+
+    & br {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    padding-top: 25px;
+
+    font-size: 18px;
+    line-height: 30px;
+
+    & br {
+      display: none;
+    }
+  }
 }
 
 .advantages__photo {
   margin-top: 40px;
   margin-bottom: -45px;
+
+  @include tablet {
+    width: 260px; /* Временно, до планшетной графики */
+    margin-bottom: -65px;
+  }
+
+  @include desktop {
+    display: none;
+  }
 }

@@ -1,5 +1,28 @@
 .form-info {
+  margin: 0;
+  margin-top: 40px;
   padding: 0 20px;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.form-info__caption {
+  display: none;
+
+  @include tablet {
+    @include font(400, 14px, 18px);
+    display: block;
+    margin: 0;
+    padding: 30px;
+
+    text-align: center;
+    color: $pink;
+    text-transform: uppercase;
+
+    background-color: transparent;
+  }
 }
 
 .form-info__item {
@@ -9,9 +32,15 @@
   &:last-child {
     padding: 0;
   }
+
+  @include tablet {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 55px;
+  }
 }
 
-.form-info__data {
+.form-info__label {
   @include font(400, 14px, 30px);
   display: block;
   padding-left: 20px;
@@ -19,6 +48,11 @@
 
   color: $pink;
   text-transform: uppercase;
+
+  @include tablet {
+    padding: 0;
+    padding-right: 20px;
+  }
 }
 
 .form-info__input {
@@ -36,5 +70,51 @@
   &::placeholder {
     font-size: 18px;
     color: $blue;
+  }
+}
+
+.form-info--name {
+  @include tablet {
+    order: 1;
+  }
+
+  @include desktop {
+    margin-top: 75px;
+    width: 435px;
+  }
+}
+
+.form-info--contact {
+  border: none;
+
+  @include tablet {
+    order: 3;
+    padding: 0 60px;
+
+    background-color: transparent;
+    border: 2px solid $greyDark;
+
+    & .form-info__item {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-bottom: 25px;
+    }
+
+    & .form-info__label {
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    & .form-info__item {
+      width: 375px;
+    }
   }
 }

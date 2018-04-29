@@ -1,15 +1,37 @@
 .main-nav {
   position: relative;
+
+  min-height: 67px;
+  margin-bottom: -67px;
+
+  background-color: rgba($black, 0.3);
+
+  @include tablet {
+    min-height: 111px;
+    margin-bottom: -111px;
+  }
 }
 
-.main-nav__logo {
-  box-sizing: border-box;
-  display: block;
-  min-height: 67px;
-  padding-top: 22px;
-  padding-left: 20px;
+.main-nav__wrapper {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
 
-  background-color: $blue;
+.main-nav__logo-image {
+  display: block;
+  width: 75px;
+  height: 23px;
+  padding: 22px 20px;
+
+  @include tablet {
+    padding: 44px 20px;
+  }
 }
 
 .main-nav__toggle {
@@ -26,4 +48,69 @@
   border: none;
   outline: none;
   cursor: pointer;
+
+  @include tablet {
+    top: 30px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 0;
+
+  width: 50px;
+  height: 24px;
+
+  background: url("../img/icon-menu-burger.svg") no-repeat 0 0;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  width: 24px;
+  height: 24px;
+
+  background: url("../img/icon-menu-cross.svg") no-repeat 0 0;
+}
+
+.main-nav--closed .site-list__link {
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__logo {
+  @include mobile-tablet {
+    display: block;
+
+    background-color: $blue;
+    border-bottom: 1px solid $black;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  @include mobile-tablet {
+    position: static;
+  }
+}
+
+.main-nav--nojs .site-list__link {
+  @include mobile-tablet {
+    display: block;
+  }
 }
