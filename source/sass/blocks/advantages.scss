@@ -1,34 +1,17 @@
 .advantages {
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
-  overflow-y: hidden;
-
   text-align: center;
-
-  @include tablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    width: 620px;
-  }
-
-  @include desktop {
-    width: 940px;
-  }
 }
 
 .advantages__slogan {
   @include font(300, 24px);
-  width: 100%;
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   padding-top: 36px;
 
   color: $blue;
 
   @include tablet {
+    width: 100%;
     padding-top: 45px;
 
     font-size: 40px;
@@ -45,8 +28,46 @@
   }
 }
 
+.advantages__info {
+  margin-top: 25px;
+
+  background: $grey-light url("../img/bg-triangle-white.svg") no-repeat 100% 0;
+  background-size: cover;
+
+  @include tablet {
+    margin-top: 35px;
+  }
+
+  @include desktop {
+    margin-top: 75px;
+  }
+}
+
+.advantages__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 55px;
+  overflow-y: hidden;
+
+  text-align: center;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 620px;
+    padding-top: 0;
+  }
+
+  @include desktop {
+    width: 940px;
+  }
+}
+
 .advantages__list {
   @include list-reset;
+  text-align: center;
 
   @include tablet {
     order: 2;
@@ -73,11 +94,17 @@
 }
 
 .advantages__title {
-  @include font(700, 18px, 24px);
   margin: 0;
-  padding-top: 36px;
+  padding-top: 34px;
 
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
   color: $black;
+
+  @include desktop {
+
+  }
 
   @include desktop {
     font-size: 30px;
@@ -86,10 +113,12 @@
 }
 
 .advantages__description {
-  @include font(400, 14px, 24px);
   margin: 0;
   padding-top: 10px;
 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
   color: $blue;
 
   & br {
@@ -116,9 +145,22 @@
   }
 }
 
-.advantages__photo {
+.advantages__photos {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+.advantages__image {
   margin-top: 40px;
   margin-bottom: -45px;
+
+  &:nth-child(-n+2) {
+    display: none;
+  }
 
   @include tablet {
     width: 260px; /* Временно, до планшетной графики */
@@ -126,6 +168,12 @@
   }
 
   @include desktop {
-    display: none;
+    width: auto;
+    margin: 0;
+    padding: 0 75px;
+
+    &:nth-child(-n+2) {
+      display: block;
+    }
   }
 }

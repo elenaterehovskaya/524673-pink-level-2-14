@@ -4,11 +4,34 @@
   line-height: $line-height;
 }
 
+@mixin position($top: null, $right: null, $bottom: null, $left: null, $position: absolute) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin pseudo($top: null, $right: null, $bottom: null, $left: null, $content: "", $position: absolute) {
+  content: $content;
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
 @mixin list-reset {
   margin: 0;
   padding: 0;
-
   list-style: none;
+}
+
+@mixin button-reset {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 @mixin tablet {

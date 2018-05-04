@@ -73,3 +73,12 @@
     padding: 0 120px;
   }
 }
+
+.reviews__toggles {
+  margin: 0;
+  padding-top: 25px;
+
+  @include desktop {
+    display: none;
+  }
+}

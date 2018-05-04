@@ -77,21 +77,18 @@
 }
 
 .feedback__button {
+  @include button-reset;
+  @include font(700, 18px, 20px);
   display: block;
   width: 280px;
   margin: 0 auto;
   padding: 20px 0;
 
-  font: inherit;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
   text-align: center;
   color: $white;
   text-transform: uppercase;
 
   background-color: $green;
-  border: none;
   border-radius: 2px;
 
   @include tablet {
