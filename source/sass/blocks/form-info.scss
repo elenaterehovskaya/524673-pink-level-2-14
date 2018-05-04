@@ -32,12 +32,6 @@
   &:last-child {
     padding: 0;
   }
-
-  @include tablet {
-    display: flex;
-    align-items: baseline;
-    padding-bottom: 55px;
-  }
 }
 
 .form-info__label {
@@ -65,7 +59,7 @@
   color: $blue;
 
   background-color: transparent;
-  border: 2px solid $greyDark;
+  border: 2px solid $grey;
 
   &::placeholder {
     font-size: 18px;
@@ -76,6 +70,12 @@
 .form-info--name {
   @include tablet {
     order: 1;
+
+    & .form-info__item {
+      display: flex;
+      align-items: baseline;
+      padding-bottom: 55px;
+    }
   }
 
   @include desktop {
@@ -92,7 +92,7 @@
     padding: 0 60px;
 
     background-color: transparent;
-    border: 2px solid $greyDark;
+    border: 2px solid $grey;
 
     & .form-info__item {
       display: flex;
@@ -105,12 +105,16 @@
       padding-left: 20px;
     }
   }
+  @include desktop {
+    width: 100%;
+  }
+}
 
+.form-info__list {
   @include desktop {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-start;
     width: 100%;
 
     & .form-info__item {

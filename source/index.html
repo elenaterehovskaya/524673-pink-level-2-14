@@ -64,23 +64,31 @@
 
       <section class="advantages">
         <h2 class="visually-hidden">Возможности приложения</h2>
-        <p class="advantages__slogan">Устали от серости мегаполиса?</p>
-        <p class="advantages__slogan">Нам есть, что вам<br> предложить!</p>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br> усилить эффект</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
-        <img class="advantages__photo" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iPhone: Всем привет!">
+        <p class="advantages__slogan slogan">Устали от серости мегаполиса?</p>
+        <p class="advantages__slogan slogan">Нам есть, что вам<br> предложить!</p>
+        <div class="advantages__info">
+          <div class="advantages__wrapper">
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <h3 class="advantages__title">Поднимает настроение</h3>
+                <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__title">Меняет мир вокруг</h3>
+                <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br> усилить эффект</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__title">Заводит новых друзей</h3>
+                <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+            <div class="advantages__photos">
+              <img class="advantages__image" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iPhone: Всем привет!">
+              <img class="advantages__image" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iPhone: Всем привет!">
+              <img class="advantages__image" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="iPhone: Всем привет!">
+            </div>
+          </div>
+        </div>
       </section>
 
       <article class="research">
@@ -96,33 +104,38 @@
       </article>
 
       <section class="reviews">
-        <div class="reviews__wrapper">
+        <div class="reviews__wrapper slider">
           <h2 class="visually-hidden">Отзывы о приложении</h2>
-          <ul class="reviews__list">
-            <li class="reviews__item">
+          <ul class="reviews__list slider__list">
+            <li class="reviews__item slider__item">
               <p class="reviews__author">Николай Петров
                 <span>25 лет, водитель трамвая</span>
               </p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
-            <li class="visually-hidden reviews__item">
+            <li class="visually-hidden reviews__item slider__item">
               <p class="reviews__author">Николай Петров
                 <span>25 лет, водитель трамвая</span>
               </p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
-            <li class="visually-hidden reviews__item">
+            <li class="visually-hidden reviews__item slider__item">
               <p class="reviews__author">Николай Петров
                 <span>25 лет, водитель трамвая</span>
               </p>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
           </ul>
+          <p class="reviews__toggles slider__toggles">
+            <button class="slider__toggle" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
+          </p>
         </div>
       </section>
 
       <section class="tariff">
-        <div class="tariff__wrapper">
+        <div class="tariff__wrapper slider">
           <h2 class="visually-hidden">Выбор тарифного плана приложения</h2>
           <table class="tariff__list slider__list">
             <tr>
@@ -177,6 +190,11 @@
               </td>
             </tr>
           </table>
+          <p class="tariff__toggles slider__toggles">
+            <button class="slider__toggle" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
+          </p>
         </div>
       </section>
 
@@ -198,6 +216,7 @@
           </li>
         </ul>
         <div class="contacts__map">
+          <iframe class="contacts__map-interactive" src="https://yandex.ru/map-widget/v1/?um=constructor%3A2af566dab5f8d864a59e7d6ab551e094b2b76e9f6dd75b7e7e44ee2ea854e695&amp;source=constructor" width="1280" height="500"></iframe>
           <img class="contacts__map-picture" src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Карта офиса">
         </div>
       </section>

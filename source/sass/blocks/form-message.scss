@@ -9,7 +9,7 @@
     padding: 40px 60px;
     order: 5;
 
-    border: 2px solid $greyDark;
+    border: 2px solid $grey;
   }
 
   @include desktop {
@@ -43,7 +43,7 @@
   line-height: 30px;
   color: $blue;
 
-  border: 2px solid $greyDark;
+  border: 2px solid $grey;
   resize: none;
 
   @include tablet {

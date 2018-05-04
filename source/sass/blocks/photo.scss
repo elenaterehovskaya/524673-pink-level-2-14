@@ -57,7 +57,7 @@
 .photo__item {
   margin: 0 20px 20px;
 
-  background-color: $greyLight;
+  background-color: $grey-light;
 
   @include desktop {
     margin: 0 10px 20px;
@@ -78,7 +78,7 @@
   &--panorama {
     margin: 0 20px 20px;
 
-    background-color: $greyLight;
+    background-color: $grey-light;
   }
 
   @include tablet {

@@ -6,16 +6,14 @@
   width: 320px;
   min-height: 237px;
   margin: 0 auto;
-  padding-top: 100px;
 
-  background: $blueDark url("../img/bg-back-mobile@1x.jpg") no-repeat 0 0;
+  background: $blue-dark url("../img/bg-back-mobile@1x.jpg") no-repeat 0 0;
 
   @include tablet {
     width: 660px;
     min-height: 440px;
-    padding-top: 175px;
 
-    background: $blueDark;
+    background: $blue-dark;
   }
 
   @include desktop {
@@ -28,12 +26,15 @@
   @include font(300, 24px);
   max-width: 280px;
   margin: 0 auto;
+  padding-top: 100px;
 
   text-align: center;
   color: $white;
 
   @include tablet {
     max-width: 520px;
+    padding-top: 175px;
+
     font-size: 50px;
   }
 

@@ -4,11 +4,11 @@
   padding: 0;
 
   border: none;
-  background-color: $greyLight;
+  background-color: $grey-light;
 
   @include tablet {
     background-color: transparent;
-    border: 2px solid $greyDark;
+    border: 2px solid $grey;
   }
 }
 
@@ -21,7 +21,7 @@
   color: $pink;
   text-transform: uppercase;
 
-  background-color: $greyLight;
+  background-color: $grey-light;
 
   @include tablet {
     background-color: transparent;
@@ -59,7 +59,7 @@
   height: 35px;
 
   background-color: $white;
-  border: 2px solid $greyDark;
+  border: 2px solid $grey;
 }
 
 .form-report__input--checkbox:checked + .form-report__label::after {
@@ -84,7 +84,7 @@
   height: 36px;
 
   background-color: $white;
-  border: 2px solid $greyDark;
+  border: 2px solid $grey;
   border-radius: 50%;
 }
 
@@ -112,8 +112,10 @@
 
     & .form-report__list {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       flex-wrap: wrap;
+      height: 200px;
     }
 
     & .form-report__item {
