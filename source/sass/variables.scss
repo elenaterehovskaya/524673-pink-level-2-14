@@ -1,3 +1,4 @@
+// Основные цвета от темного к светлому
 $black: #000000;
 
 $blue-dark: #1d2631;
@@ -15,5 +16,11 @@ $grey-light: #f2f2f2;
 
 $white: #ffffff;
 
+// Основные размеры экранов
+$mobile-width: 320px;
 $tablet-width: 660px;
 $desktop-width: 960px;
+
+// Разрешение ретины
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

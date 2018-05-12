@@ -1,17 +1,15 @@
 .application {
-  padding: 0 20px;
+  padding: 462px 20px 0;
 
   text-align: center;
 
   @include tablet {
     width: 300px;
-    padding-top: 200px;
+    padding: 200px 0 0;
   }
 
   @include desktop {
-    margin: 0 auto;
-    padding-top: 215px;
-    padding-right: 640px;
+    padding: 215px 0 0;
   }
 }
 
@@ -36,12 +34,31 @@
 }
 
 .application__button {
+  @include font(700, 18px, 18px);
+  display: block;
+  padding: 16px 0;
   margin-top: 25px;
   margin-bottom: 36px;
 
   color: $white;
+  text-decoration: none;
 
+  background-color: transparent;
   border: 3px solid $white;
+  border-radius: 30px;
+
+  transition: 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $pink;
+
+    background-color: $white;
+  }
+
+  &:active {
+    color: rgba($pink, 0.3);
+  }
 
   @include tablet {
     margin-bottom: 40px;
@@ -49,16 +66,18 @@
 
   @include desktop {
     margin-bottom: 70px;
+
+    font-size: 21px;
   }
 }
 
 .application__list {
   @include list-reset;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
   margin-bottom: 15px;
-  padding: 0 36px;
 
   @include tablet {
     margin-bottom: 28px;

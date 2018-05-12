@@ -1,16 +1,3 @@
-.feedback {
-  width: 320px;
-  margin: 0 auto;
-
-  @include tablet {
-    width: 660px;
-  }
-
-  @include desktop {
-    width: auto;
-  }
-}
-
 .feedback__title {
   @include font(400, 14px, 30px);
   max-width: 280px;
@@ -43,8 +30,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 320px;
+  margin: 0 auto;
 
   @include tablet {
+    width: 660px;
     padding: 0 20px;
   }
 

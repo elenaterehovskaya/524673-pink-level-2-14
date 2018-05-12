@@ -4,14 +4,6 @@
   line-height: $line-height;
 }
 
-@mixin position($top: null, $right: null, $bottom: null, $left: null, $position: absolute) {
-  position: $position;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-}
-
 @mixin pseudo($top: null, $right: null, $bottom: null, $left: null, $content: "", $position: absolute) {
   content: $content;
   position: $position;
@@ -32,6 +24,12 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width + 1}) {
+    @content;
+  }
 }
 
 @mixin tablet {

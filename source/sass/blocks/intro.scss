@@ -1,24 +1,55 @@
 .intro {
-  position: relative;
-  z-index: -1;
-
-  box-sizing: border-box;
-  width: 320px;
   min-height: 237px;
   margin: 0 auto;
 
-  background: $blue-dark url("../img/bg-back-mobile@1x.jpg") no-repeat 0 0;
+  background: $blue-dark url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
+
+  @include mobile {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: auto 462px;
+  }
 
   @include tablet {
     width: 660px;
     min-height: 440px;
 
-    background: $blue-dark;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   @include desktop {
     width: auto;
     min-height: 395px;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+}
+
+.intro__wrapper {
+  position: relative;
+  z-index: 1;
+
+  width: 320px;
+  min-height: 735px;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  @include tablet {
+    width: 620px;
+    padding: 0 20px;
+  }
+
+  @include desktop {
+    width: 940px;
+    padding: 0 10px;
   }
 }
 
@@ -44,12 +75,21 @@
 }
 
 .intro__image {
-  display: block;
-  padding-top: 175px;
+  position: absolute;
+  left: 0;
+  bottom: 274px;
+  z-index: -1;
 
   @include tablet {
-    position: absolute;
-    left: 50%;
+    left: -20px;
     bottom: 0;
+
+    max-width: 700px;
+  }
+
+  @include desktop {
+    left: 25px;
+
+    max-width: 1050px;
   }
 }

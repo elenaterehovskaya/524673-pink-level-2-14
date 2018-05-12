@@ -1,7 +1,10 @@
 .reviews {
+  position: relative;
+
   width: 280px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  margin: 0 auto 40px;
+  padding: 40px 0;
+  overflow: hidden;
 
   text-align: center;
 
@@ -10,15 +13,45 @@
   }
 
   @include desktop {
+    position: relative;
+
     width: 940px;
+    padding: 185px 10px 40px;
+
+    &::before {
+      @include pseudo($top: 70px, $left: 50%);
+      width: 80px;
+      height: 64px;
+
+      margin-left: -40px;
+
+      background: url("../img/icon-quotes.svg") no-repeat 0 0;
+    }
   }
 }
 
 .reviews__list {
   @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  width: 840px;
+
+  transition: transform 0.7s ease-in-out;
+
+  @include tablet {
+    width: 1860px;
+  }
+
+  @include desktop {
+    width: 2820px;
+  }
 }
 
 .reviews__item {
+  position: relative;
+
+  width: 100%;
+
   @include tablet {
     display: flex;
     flex-direction: column-reverse;
@@ -75,10 +108,38 @@
 }
 
 .reviews__toggles {
-  margin: 0;
-  padding-top: 25px;
-
   @include desktop {
     display: none;
   }
+}
+
+.reviews__prev,
+.reviews__next {
+  display: none;
+
+  @include desktop {
+    @include button-reset;
+    display: block;
+
+    font-size: 0;
+
+    opacity: 0.3;
+  }
+}
+
+.reviews__prev::before {
+  @include pseudo($top: 50%, $left: 0);
+  width: 22px;
+  height: 46px;
+
+  background: url("../img/icon-review-arrow-left.svg") no-repeat 0 0;
+
+}
+
+.reviews__next::before {
+  @include pseudo($top: 50%, $right: 0);
+  width: 22px;
+  height: 46px;
+
+  background: url("../img/icon-review-arrow-right.svg") no-repeat 0 0;
 }

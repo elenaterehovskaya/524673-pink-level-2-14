@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>Пинк: фотографии пользователей</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
 
   <body>
@@ -12,7 +18,11 @@
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo" href="index.html">
-            <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <ul class="main-nav__list site-list">
@@ -42,11 +52,16 @@
         <h2 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         <h3 class="visually-hidden">Фотография Анны</h3>
         <a href="#">
-          <img class="photo__panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография Анны">
+          <picture class="photo__panorama">
+            <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+            <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фотография Анны">
+          </picture>
         </a>
         <div class="photo__info photo__info--panorama">
-          <b class="photo__author">Анна</b>
-          <time class="photo__date" datetime="2018-01-01T18:18">(5 минут назад)</time>
+          <p class="photo__author">Анна
+            <time class="photo__date" datetime="2018-01-01T18:18">(5 минут назад)</time>
+          </p>
           <p class="photo__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
           <p class="photo__rating">Нравится: 215</p>
         </div>
@@ -54,11 +69,16 @@
           <li class="photo__item">
             <h3 class="visually-hidden">Фотография Левона</h3>
             <a href="#">
-              <img class="photo__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография Левона">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фотография Левона">
+              </picture>
             </a>
             <div class="photo__info">
-              <b class="photo__author">Левон</b>
-              <time class="photo__date" datetime="2018-01-01T18:18">(5 часов назад)</time>
+              <p class="photo__author">Левон
+                <time class="photo__date" datetime="2018-01-01T18:18">(5 часов назад)</time>
+              </p>
               <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
               <p class="photo__rating">Нравится: 356</p>
             </div>
@@ -66,11 +86,16 @@
           <li class="photo__item">
             <h3 class="visually-hidden">Фотография Антона</h3>
             <a href="#">
-              <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография Антона">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фотография Антона">
+              </picture>
             </a>
             <div class="photo__info">
-              <b class="photo__author">Антон</b>
-              <time class="photo__date" datetime="2018-01-01T18:18">(12 часов назад)</time>
+              <p class="photo__author">Антон
+                <time class="photo__date" datetime="2018-01-01T18:18">(12 часов назад)</time>
+              </p>
               <p class="photo__text">Соседи будут рады!</p>
               <p class="photo__rating">Нравится: 666</p>
             </div>
@@ -78,11 +103,16 @@
           <li class="photo__item">
             <h3 class="visually-hidden">Фотография Бориса</h3>
             <a href="#">
-              <img class="photo__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография Бориса">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фотография Бориса">
+              </picture>
             </a>
             <div class="photo__info">
-              <b class="photo__author">Борис</b>
-              <time class="photo__date" datetime="2018-01-01T18:18">(20 часов назад)</time>
+              <p class="photo__author">Борис
+                <time class="photo__date" datetime="2018-01-01T18:18">(20 часов назад)</time>
+              </p>
               <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
               <p class="photo__rating">Нравится: 215</p>
             </div>
@@ -90,11 +120,16 @@
           <li class="photo__item">
             <h3 class="visually-hidden">Фотография Сергея</h3>
             <a href="#">
-              <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография Сергея">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фотография Сергея">
+              </picture>
             </a>
             <div class="photo__info">
-              <b class="photo__author">Сергей</b>
-              <time class="photo__date" datetime="2018-01-01T18:18">(25 часов назад)</time>
+              <p class="photo__author">Сергей
+                <time class="photo__date" datetime="2018-01-01T18:18">(25 часов назад)</time>
+              </p>
               <p class="photo__text">Самая кубанская в мире!</p>
               <p class="photo__rating">Нравится: 4</p>
             </div>
@@ -102,11 +137,16 @@
           <li class="photo__item">
             <h3 class="visually-hidden">Фотография Максима</h3>
             <a href="#">
-              <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография Максима">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фотография Максима">
+              </picture>
             </a>
             <div class="photo__info">
-              <b class="photo__author">Максим</b>
-              <time class="photo__date" datetime="2018-01-01T18:18">(40 часов назад)</time>
+              <p class="photo__author">Максим
+                <time class="photo__date" datetime="2018-01-01T18:18">(40 часов назад)</time>
+              </p>
               <p class="photo__text">Где снег-то?</p>
               <p class="photo__rating">Нравится: 150</p>
             </div>
@@ -114,11 +154,16 @@
           <li class="photo__item">
             <h3 class="visually-hidden">Фотография Надежды</h3>
             <a href="#">
-              <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография Надежды">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фотография Надежды">
+              </picture>
             </a>
             <div class="photo__info">
-              <b class="photo__author">Надежда</b>
-              <time class="photo__date" datetime="2018-01-01T18:18">(45 часов назад)</time>
+              <p class="photo__author">Надежда
+                <time class="photo__date" datetime="2018-01-01T18:18">(45 часов назад)</time>
+              </p>
               <p class="photo__text">Всем GM и взаимные лайки!</p>
               <p class="photo__rating">Нравится: 2560</p>
             </div>
@@ -130,30 +175,40 @@
         <h2 class="upload__title">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</h2>
         <div class="upload__photo">
           <h3 class="visually-hidden">Ваша фотография</h3>
-          <img class="upload__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Ваше фото">
-          <div class="upload__filter">
-            <ul class="upload__list">
-              <li>
-                <button class="upload__item" type="button"></button>
-              </li>
-              <li>
-                <button class="upload__item" type="button"></button>
-              </li>
-              <li>
-                <button class="upload__item" type="button"></button>
-              </li>
-            </ul>
-            <div class="upload__setting"></div>
-            <button class="upload__button-post button" type="submit">Запостить</button>
-            <button class="upload__button-cancel button" type="reset">Отмена</button>
-          </div>
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+            <img class="upload__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Ваше фото">
+          </picture>
+          <form class="upload__filter" action="https://echo.htmlacademy.ru" method="post">
+            <p class="upload__item">
+              <button class="upload__filter-icon" type="button">Обрезать</button>
+              <input class="upload-input" id="field-crop" name="crop" type="range" min="0" max="100" step="1" value="25">
+              <label for="field-crop"></label>
+            </p>
+            <p class="upload__item">
+              <button class="upload__filter-icon" type="button">Залить</button>
+              <input class="upload-input" id="field-fill" name="fill" type="range" min="0" max="100" step="1" value="85">
+              <label for="field-fill"></label>
+            </p>
+            <p class="upload__item">
+              <button class="upload__filter-icon" type="button">Контраст</button>
+              <input class="upload-input" id="field-contrast" name="contrast" type="range" min="0" max="100" step="1" value="60">
+              <label for="field-contrast"></label>
+            </p>
+            <button class="upload__button upload__button--post" type="submit">Запостить</button>
+            <button class="upload__button upload__button--cancel" type="reset">Отмена</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="page-footer">
       <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Pink">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="41" alt="Логотип Pink">
+        </picture>
       </a>
       <div class="page-footer__social social">
         <h2 class="visually-hidden">Мы в соцсетях</h2>

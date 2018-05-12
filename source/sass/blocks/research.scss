@@ -3,7 +3,7 @@
 
   @include tablet {
     display: block;
-    padding: 85px 0;
+    padding: 55px 0;
   }
 
   @include desktop {
@@ -36,29 +36,50 @@
 .research__diagram {
   @include tablet {
     @include font(700, 96px);
-    width: 180px;
-    height: 130px;
-    margin-top: 15px;
-    margin-left: 15px;
-    padding: 25px 0;
+    position: relative;
 
-    text-align: center;
+    box-sizing: border-box;
+    width: (100% / 2);
+    height: 277px;
+    padding-top: 90px;
+    padding-left: 65px;
+
     color: $pink;
 
-    border: 12px solid $pink;
-    border-radius: 50%;
+    background: url("../img/icon-timer.svg") no-repeat 0 0;
+    background-size: auto 277px;
+
+    &::before {
+      @include pseudo($top: 56px, $left: 17px);
+      width: 180px;
+      height: 180px;
+
+      border: 12px solid $pink;
+      border-radius: 50%;
+    }
   }
 
   @include desktop {
-    width: 220px;
-    height: 160px;
-    margin-top: 0;
-    margin-left: 25px;
-    padding: 30px 0;
+    width: 298px;
+    height: 346px;
+    padding-top: 115px;
+    padding-left: 80px;
 
     font-size: 120px;
+    color: $pink;
 
-    border: 15px solid $pink;
+    background-size: auto;
+
+    &::before {
+      top: 70px;
+      left: 25px;
+
+      width: 220px;
+      height: 220px;
+
+      border: 15px solid $pink;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -105,5 +126,15 @@
     display: block;
 
     color: $pink;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+
+    &:active {
+      color: rgba($blue, 0.3);
+      text-decoration: none;
+    }
   }
 }

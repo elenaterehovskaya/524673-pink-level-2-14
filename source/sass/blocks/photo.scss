@@ -1,66 +1,97 @@
-.photo {
-  width: 320px;
-  margin: 0 auto;
-
-  @include tablet {
-    width: 660px;
-  }
-
-  @include desktop {
-    width: auto;
-  }
-}
-
 .photo__title {
   @include font(400, 14px, 30px);
-  margin: 0;
-  padding: 47px 35px;
+  width: 250px;
+  margin: 0 auto;
+  padding: 47px 0;
 
   text-align: center;
   color: $blue;
 
   @include tablet {
-    padding: 75px 65px;
+    width: 450px;
+    padding: 75px 0;
 
     font-size: 18px;
   }
 
   @include desktop {
-    padding: 100px 300px;
+    width: 600px;
+    padding: 100px 0;
   }
 }
 
 .photo__panorama {
+  position: relative;
+
   display: block;
+  width: 320px;
+  margin: 0 auto;
+
+  & img {
+    display: block;
+  }
+
+  &::before {
+    @include pseudo($top: 0, $right: 20px, $content: "Панорама дня");
+    @include font(700, 12px, 24px);
+    width: 140px;
+    height: 30px;
+    padding-top: 6px;
+
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: $pink;
+  }
 
   @include tablet {
-    width: 100%;
+    width: 660px;
+
+    &::before {
+      top: 45px;
+    }
+  }
+
+  @include desktop {
+    width: 1200px;
+
+    &::before {
+      top: 50px;
+      right: 125px;
+    }
   }
 }
 
 .photo__list {
-  @include list-reset;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  list-style: none;
 
   @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
+    width: 660px;
   }
 
   @include desktop {
     width: 960px;
-    margin: 0 auto;
+    padding: 0 10px;
   }
 }
 
 .photo__item {
-  margin: 0 20px 20px;
+  margin-bottom: 20px;
 
   background-color: $grey-light;
 
   @include desktop {
-    margin: 0 10px 20px;
+    margin-bottom: 50px;
   }
 }
 
@@ -71,32 +102,19 @@
 .photo__info {
   box-sizing: border-box;
   width: 280px;
-  padding: 17px 20px 22px;
+  padding: 17px 20px 20px;
 
   color: $blue;
 
-  &--panorama {
-    margin: 0 20px 20px;
-
-    background-color: $grey-light;
-  }
-
   @include tablet {
-    &--panorama {
-      width: 620px;
-      margin: 0 auto 50px;
-    }
-  }
-
-  @include desktop {
-    &--panorama {
-      width: 940px;
-      margin: 0 auto 50px;
-    }
+    display: flex;
+    flex-direction: column;
+    min-height: 155px;
   }
 }
 
 .photo__author {
+  margin: 0;
   @include font(700, 14px, 24px);
 }
 
@@ -116,20 +134,63 @@
   position: relative;
 
   margin: 0;
+  margin-top: auto;
   padding-left: 30px;
 
   color: $pink;
   text-transform: uppercase;
 
   &::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 0;
-
+    @include pseudo($top: 5px, $left: 0);
     width: 13px;
     height: 12px;
 
     background: url("../img/icon-heart.svg") no-repeat 0 0;
+  }
+
+  @include tablet {
+    padding-left: 0;
+
+    &::before {
+      left: 240px;
+    }
+  }
+}
+
+.photo__info--panorama {
+  margin: 0 auto 20px;
+
+  background-color: $grey-light;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 620px;
+    min-height: auto;
+    margin: 0 auto 50px;
+
+    .photo__author {
+      order: 1;
+    }
+
+    .photo__text {
+      order: 3;
+    }
+
+    .photo__rating {
+      order: 2;
+      padding-right: 40px;
+
+      &::before {
+        left: 105px;
+      }
+    }
+  }
+
+  @include desktop {
+    width: 940px;
+    margin: 0 auto 50px;
   }
 }
