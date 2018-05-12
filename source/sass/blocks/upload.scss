@@ -4,7 +4,7 @@
   padding-bottom: 30px;
 
   @include tablet {
-    width: 660px;
+    width: 620px;
   }
 
   @include desktop {
@@ -14,68 +14,279 @@
 
 .upload__title {
   @include font(400, 14px, 30px);
-  margin: 0;
-  padding: 20px 20px 30px;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0 30px;
 
   text-align: center;
   color: $blue;
 
   @include tablet {
-    padding: 40px 20px 60px;
+    width: 450px;
+    padding: 40px 0 60px;
 
     font-size: 18px;
   }
 }
 
 .upload__photo {
-  padding: 20px;
+  padding: 20px 20px 40px;
 
   background-color: $grey-light;
 
   @include tablet {
     display: flex;
     justify-content: space-between;
-    width: 620px;
+    align-items: flex-start;
+    padding: 60px 20px;
   }
 
   @include desktop {
-    width: 900px;
+    padding: 60px;
   }
 }
 
 .upload__image {
   display: block;
+
+  @include desktop {
+    padding-left: 20px;
+  }
 }
 
-.upload__list {
-  @include list-reset;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.upload__filter {
+  box-shadow: 0 0 0 1px red;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 50%;
+  }
 }
 
-.upload__button-post {
+.upload__item {
+  box-shadow: 0 0 0 1px red;
+  margin: 20px;
+
+  &:nth-child(-n+2) {
+    display: none;
+  }
+
+  @include tablet {
+    width: 275px;
+    height: 70px;
+    margin-left: 35px;
+
+    &:nth-child(-n+2) {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    width: 410px;
+    margin: 0;
+
+    border-bottom: 1px solid $grey;
+  }
+}
+
+.upload__filter-icon {
+  box-shadow: 0 0 0 1px red;
+  position: relative;
+
+  width: 48px;
+  height: 70px;
+
+  font-size: 0;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @include tablet-only {
+    width: 25px;
+  }
+}
+
+.upload__filter-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 48px;
+  height: 48px;
+
+  background: url("../img/icon-editor-crop.svg") no-repeat 0 0;
+
+  @include tablet-only {
+    width: 25px;
+
+    background-size: 25px auto;
+  }
+}
+
+.upload-input {
+  -webkit-appearance: none;
+
+  width: 202px;
+  height: 2px;
+  margin-left: 30px;
+
+  background-color: $blue;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  @include tablet {}
+
+  @include desktop {
+    width: 288px;
+    margin-left: 45px;
+  }
+}
+
+.upload-input::-moz-range-track {
+  @include desktop {
+    width: 288px;
+    height: 2px;
+    margin-left: 45px;
+
+    background-color: $blue;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
+
+.upload-input::-ms-track {
+  @include desktop {
+    background: $blue;
+    cursor: pointer;
+  }
+}
+
+.upload-input::-ms-fill-lower,
+.upload-input::-ms-fill-upper {
+  color: transparent;
+  background: transparent;
+  border-color: transparent;
+}
+
+.upload-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 15px;
+  height: 15px;
+
+  background: $grey-light;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: 0.1s;
+
+  &:active {
+    background: $pink;
+  }
+}
+
+.upload-input::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+
+  background: $grey-light;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: 0.1s;
+
+  &:active {
+    background: $pink;
+  }
+}
+
+.upload-input::-ms-thumb {
+  width: 15px;
+  height: 15px;
+
+  background: $grey-light;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: 0.1s;
+
+  &:active {
+    background: $pink;
+  }
+}
+
+.upload__button {
+  @include font(700, 18px, 18px);
+  display: block;
   width: 100%;
-  margin-top: 20px;
+  padding: 16px 0;
 
-  color: $pink;
+  text-decoration: none;
 
-  border: 3px solid $pink;
+  background-color: transparent;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+
+  transition: 0.3s ease-in-out;
+
+  &--post {
+    margin-top: 20px;
+
+    color: $pink;
+
+    border: 3px solid $pink;
+
+    &:hover,
+    &:focus {
+      color: $white;
+
+      background-color: $pink;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
+  }
+
+  &--cancel {
+    margin-top: 10px;
+
+    color: rgba($blue, 0.1);
+
+    border: 3px solid rgba($blue, 0.1);
+
+    &:hover,
+    &:focus {
+      color: rgba($blue, 0.3);
+
+      border: 3px solid rgba($blue, 0.3);
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+
+      background-color: rgba($blue, 0.3);
+      border: 3px solid rgba($blue, 0);
+    }
+  }
 
   @include tablet {
     width: 260px;
   }
-}
 
-.upload__button-cancel {
-  width: 100%;
-  margin-top: 10px;
-
-  color: rgba($blue, 0.1);
-
-  border: 3px solid rgba($blue, 0.1);
-
-  @include tablet {
-    width: 260px;
+  @include desktop {
+    width: 185px;
+    margin-top: 135px;
   }
 }

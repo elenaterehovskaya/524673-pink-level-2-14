@@ -1,4 +1,5 @@
 .tariff {
+  padding-bottom: 40px;
   margin-bottom: 40px;
 
   background: $grey-light url("../img/bg-triangle-white.svg") no-repeat 100% 0;
@@ -16,10 +17,12 @@
 }
 
 .tariff__wrapper {
-  width: 320px;
+  position: relative;
+
+  width: 280px;
   margin: 0 auto;
-  padding: 103px 0 50px;
-  overflow-x: hidden;
+  padding: 103px 20px 50px;
+  overflow: hidden;
 
   @include tablet {
     width: 620px;
@@ -34,13 +37,13 @@
 
 .tariff__list {
   width: 840px;
-  margin-left: -260px;
 
   border-collapse: collapse;
 
+  transition: transform 0.7s ease-in-out;
+
   @include tablet {
     width: 100%;
-    margin: 0;
   }
 }
 
@@ -197,11 +200,6 @@
 }
 
 .tariff__toggles {
-  margin: 0;
-  padding-top: 30px;
-
-  text-align: center;
-
   @include tablet {
     display: none;
   }

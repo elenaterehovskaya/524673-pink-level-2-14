@@ -25,8 +25,9 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: 660px;
+    width: 620px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   @include desktop {
@@ -72,12 +73,28 @@
   }
 }
 
+.contacts__link {
+  color: $pink;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+    text-decoration: none;
+  }
+}
+
 .contacts__map {
   position: relative;
 
   width: 100%;
   height: 230px;
-  margin-top: 20px;
+  margin: 0 auto;
   overflow: hidden;
 
   &::before {
@@ -94,22 +111,6 @@
     background-size: cover;
   }
 
-  @include tablet {
-    height: 405px;
-
-    &::before {
-      height: 125px;
-    }
-  }
-
-  @include desktop {
-    height: 560px;
-
-    &::before {
-      height: 200px;
-    }
-  }
-
   &::after {
     @include pseudo($top: 125px, $left: 50%);
     z-index: 10;
@@ -119,11 +120,45 @@
 
     background: url("../img/icon-map-marker.svg") no-repeat 0 0;
   }
+
+  @include tablet {
+    height: 405px;
+
+    &::before {
+      height: 125px;
+    }
+
+    &::after {
+      top: 225px;
+    }
+  }
+
+  @include desktop {
+    max-width: 1200px;
+    height: 560px;
+
+    &::before {
+      height: 200px;
+    }
+
+    &::after {
+      top: 325px;
+    }
+  }
 }
 
 .contacts__map-picture {
   margin-top: -415px;
+
+  @include tablet {
+    margin-top: -315px;
+  }
+
+  @include desktop {
+    margin-top: -215px;
+  }
 }
+
 .contacts__map-interactive {
   position: absolute;
   top: 0;

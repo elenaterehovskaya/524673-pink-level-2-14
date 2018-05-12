@@ -17,6 +17,22 @@
 
   border: 3px solid rgba($blue, 0.1);
   border-radius: 50%;
+  cursor: pointer;
+
+  transition: 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $blue;
+  }
+
+  &:active {
+    border: 3px solid rgba($blue, 0.1);
+
+    & .social__link {
+      opacity: 0.3;
+    }
+  }
 }
 
 .social__link {
@@ -51,5 +67,9 @@
     height: 14px;
 
     background: url("../img/icon-youtube.svg") no-repeat 0 0;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
