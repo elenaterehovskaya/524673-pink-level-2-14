@@ -4,7 +4,7 @@
   padding-bottom: 30px;
 
   @include tablet {
-    width: 620px;
+    width: 660px;
   }
 
   @include desktop {
@@ -55,7 +55,7 @@
 }
 
 .upload__filter {
-  box-shadow: 0 0 0 1px red;
+  box-shadow: inset 0 0 0 1px red;
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -66,7 +66,7 @@
 }
 
 .upload__item {
-  box-shadow: 0 0 0 1px red;
+  box-shadow: inset 0 0 0 1px red;
   margin: 20px;
 
   &:nth-child(-n+2) {
@@ -76,7 +76,9 @@
   @include tablet {
     width: 275px;
     height: 70px;
-    margin-left: 35px;
+    margin: 0 auto;
+
+    border-bottom: 1px solid $grey;
 
     &:nth-child(-n+2) {
       display: block;
@@ -86,17 +88,16 @@
   @include desktop {
     width: 410px;
     margin: 0;
-
-    border-bottom: 1px solid $grey;
   }
 }
 
 .upload__filter-icon {
-  box-shadow: 0 0 0 1px red;
+  box-shadow: inset 0 0 0 1px red;
   position: relative;
 
   width: 48px;
   height: 70px;
+  margin-left: 10px;
 
   font-size: 0;
 
@@ -122,6 +123,8 @@
   background: url("../img/icon-editor-crop.svg") no-repeat 0 0;
 
   @include tablet-only {
+    top: 45px;
+
     width: 25px;
 
     background-size: 25px auto;
@@ -131,16 +134,19 @@
 .upload-input {
   -webkit-appearance: none;
 
-  width: 202px;
+  width: 100%;
   height: 2px;
-  margin-left: 30px;
 
   background-color: $blue;
   border: none;
   box-shadow: none;
   cursor: pointer;
 
-  @include tablet {}
+  @include tablet {
+    width: 200px;
+    height: 2px;
+    margin-left: 20px;
+  }
 
   @include desktop {
     width: 288px;
@@ -283,6 +289,15 @@
 
   @include tablet {
     width: 260px;
+    margin: 0 auto;
+
+    &--post {
+      margin-top: 50px;
+    }
+
+    &--cancel {
+      margin-top: 25px;
+    }
   }
 
   @include desktop {
