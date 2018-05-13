@@ -24,7 +24,7 @@
   position: relative;
 
   display: block;
-  width: 320px;
+  max-width: 320px;
   margin: 0 auto;
 
   & img {
@@ -46,7 +46,7 @@
   }
 
   @include tablet {
-    width: 660px;
+    max-width: 660px;
 
     &::before {
       top: 45px;
@@ -54,7 +54,7 @@
   }
 
   @include desktop {
-    width: 1200px;
+    max-width: 1200px;
 
     &::before {
       top: 50px;
