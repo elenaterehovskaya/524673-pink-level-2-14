@@ -114,8 +114,8 @@
 }
 
 .photo__author {
-  margin: 0;
   @include font(700, 14px, 24px);
+  margin: 0;
 }
 
 .photo__date {
