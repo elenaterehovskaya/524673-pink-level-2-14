@@ -24,18 +24,53 @@
   }
 }
 
-.main-nav__logo-image {
+.main-nav__logo-icon {
   display: block;
   width: 75px;
   height: auto;
   padding: 22px 20px;
 
+  fill: $white;
+
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    fill: $pink;
+  }
+
+  &:active {
+    fill: rgba($white, 0.3);
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+
   @include tablet {
     width: 147px;
+
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
   }
 
   @include desktop {
     padding-left: 0;
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
   }
 }
 
@@ -64,17 +99,44 @@
 .main-nav--closed .main-nav__toggle::before {
   @include pseudo($top: 12px, $right: 0);
   width: 50px;
-  height: 24px;
+  height: 4px;
 
-  background: url("../img/icon-menu-burger.svg") no-repeat 0 0;
+  background-color: $white;
+  box-shadow: 0 10px 0 0 $white, 0 20px 0 0 $white;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: $pink;
+  box-shadow: 0 10px 0 0 $pink, 0 20px 0 0 $pink;
+}
+
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  @include pseudo($top: 20px, $right: 0);
+  width: 30px;
+  height: 5px;
+
+  background-color: $white;
+
+  transition: 0.3s ease-in-out;
 }
 
 .main-nav--opened .main-nav__toggle::before {
-  @include pseudo($top: 10px, $right: 0);
-  width: 24px;
-  height: 24px;
+  transform: rotate(45deg);
+}
 
-  background: url("../img/icon-menu-cross.svg") no-repeat 0 0;
+.main-nav--opened .main-nav__toggle::after {
+  transform: rotate(-45deg);
+}
+
+.main-nav--opened .main-nav__toggle:hover::before,
+.main-nav--opened .main-nav__toggle:hover::after {
+  background-color: $pink;
+}
+
+.main-nav--opened .main-nav__toggle:active::before,
+.main-nav--opened .main-nav__toggle:active::after {
+  opacity: 0.3;
 }
 
 .main-nav--closed .site-list__link {

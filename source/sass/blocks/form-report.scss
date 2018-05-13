@@ -60,6 +60,7 @@
 
   background-color: $white;
   border: 2px solid $grey;
+  border-radius: 3px;
 }
 
 .form-report__input--checkbox:checked + .form-report__label::after {
@@ -68,10 +69,13 @@
   top: 0;
   left: 30px;
 
-  width: 22px;
-  height: 16px;
+  width: 21px;
+  height: 8px;
 
-  background: url("../img/icon-yes.svg") no-repeat 0 0;
+  border-left: 2px solid $pink;
+  border-bottom: 2px solid $pink;
+
+  transform: rotate(-45deg);
 }
 
 .form-report__input--radio + .form-report__label::before {
@@ -99,6 +103,16 @@
 
   background-color: $pink;
   border-radius: 50%;
+}
+
+.form-report__input--radio:hover + .form-report__label::before,
+.form-report__input--checkbox:hover + .form-report__label::before {
+  border: 2px solid $blue;
+}
+
+.form-report__input--radio:focus + .form-report__label::before,
+.form-report__input--checkbox:focus + .form-report__label::before {
+  border: 2px solid $pink;
 }
 
 .form-report--progress {
