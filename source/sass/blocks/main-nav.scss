@@ -20,7 +20,7 @@
     align-items: center;
     width: 940px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 15px;
   }
 }
 
@@ -28,7 +28,7 @@
   display: block;
   width: 75px;
   height: auto;
-  padding: 22px 20px;
+  padding: 24px 20px;
 
   fill: $white;
 
@@ -61,6 +61,7 @@
   }
 
   @include desktop {
+    padding-top: 10px;
     padding-left: 0;
 
     &--desktop {

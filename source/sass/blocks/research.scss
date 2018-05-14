@@ -7,7 +7,7 @@
   }
 
   @include desktop {
-    padding-top: 140px;
+    padding-top: 65px;
 
     background-color: $grey-light;
 
@@ -21,7 +21,7 @@
   @include tablet {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 620px;
     margin: 0 auto;
     padding: 0 20px;
@@ -62,7 +62,7 @@
   @include desktop {
     width: 298px;
     height: 346px;
-    padding-top: 115px;
+    padding-top: 120px;
     padding-left: 80px;
 
     font-size: 120px;
@@ -91,6 +91,7 @@
 
   @include desktop {
     width: 570px;
+    margin-top: 95px;
   }
 }
 
@@ -114,7 +115,7 @@
   }
 
   @include desktop {
-    padding: 20px 0;
+    padding: 17px 0;
 
     font-size: 18px;
     line-height: 30px;
