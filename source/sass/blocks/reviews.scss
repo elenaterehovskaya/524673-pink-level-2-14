@@ -16,10 +16,10 @@
     position: relative;
 
     width: 940px;
-    padding: 185px 10px 40px;
+    padding: 200px 10px 0;
 
     &::before {
-      @include pseudo($top: 70px, $left: 50%);
+      @include pseudo($top: 80px, $left: 50%);
       width: 80px;
       height: 64px;
 
@@ -137,7 +137,7 @@
 }
 
 .reviews__prev::before {
-  @include pseudo($top: 50%, $left: 0);
+  @include pseudo($top: 225px, $left: 0);
   width: 22px;
   height: 46px;
 
@@ -145,7 +145,7 @@
 }
 
 .reviews__next::before {
-  @include pseudo($top: 50%, $right: 0);
+  @include pseudo($top: 225px, $right: 0);
   width: 22px;
   height: 46px;
 

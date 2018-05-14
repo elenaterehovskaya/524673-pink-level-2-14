@@ -103,6 +103,8 @@
   color: $black;
 
   @include desktop {
+    padding-top: 54px;
+
     font-size: 30px;
     line-height: 30px;
   }
