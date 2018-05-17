@@ -3,11 +3,11 @@
 
   @include tablet {
     display: block;
-    padding: 55px 0;
+    padding-top: 60px;
   }
 
   @include desktop {
-    padding-top: 65px;
+    padding: 65px 0;
 
     background-color: $grey-light;
 
@@ -41,7 +41,7 @@
     box-sizing: border-box;
     width: (100% / 2);
     height: 277px;
-    padding-top: 90px;
+    padding-top: 92px;
     padding-left: 65px;
 
     color: $pink;
@@ -87,11 +87,12 @@
   @include tablet {
     width: (100% / 2);
     min-height: 210px;
+    margin-top: 40px;
   }
 
   @include desktop {
     width: 570px;
-    margin-top: 95px;
+    margin-top: 90px;
   }
 }
 
@@ -115,7 +116,7 @@
   }
 
   @include desktop {
-    padding: 17px 0;
+    padding: 18px 0;
 
     font-size: 18px;
     line-height: 30px;

@@ -14,7 +14,7 @@
     min-height: 440px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-size: auto;
+    background-size: auto 730px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -26,6 +26,7 @@
     min-height: 395px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: auto 853px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -38,7 +39,7 @@
   z-index: 1;
 
   width: 320px;
-  min-height: 735px;
+  min-height: 733px;
   margin: 0 auto;
   overflow-x: hidden;
 
@@ -49,6 +50,7 @@
 
   @include desktop {
     width: 940px;
+    min-height: 853px;
     padding: 0 10px;
   }
 }
@@ -64,24 +66,26 @@
 
   @include tablet {
     max-width: 520px;
-    padding-top: 175px;
+    padding-top: 178px;
 
     font-size: 50px;
   }
 
   @include desktop {
     max-width: 780px;
+    padding-top: 172px;
   }
 }
 
 .intro__image {
   position: absolute;
   left: 0;
-  bottom: 274px;
+  top: 175px;
   z-index: -1;
 
   @include tablet {
     left: -20px;
+    top: auto;
     bottom: 0;
 
     max-width: 700px;

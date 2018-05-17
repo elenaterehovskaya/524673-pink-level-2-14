@@ -2,24 +2,27 @@
   position: relative;
 
   width: 280px;
-  margin: 0 auto 40px;
-  padding: 40px 0;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 45px 0;
   overflow: hidden;
 
   text-align: center;
 
   @include tablet {
     width: 620px;
+    margin-bottom: 20px;
+    padding: 90px 0 44px;
   }
 
   @include desktop {
     position: relative;
 
     width: 940px;
-    padding: 200px 10px 0;
+    padding: 185px 0 0;
 
     &::before {
-      @include pseudo($top: 80px, $left: 50%);
+      @include pseudo($top: 75px, $left: 50%);
       width: 80px;
       height: 64px;
 
@@ -94,7 +97,7 @@
 .reviews__text {
   @include font(400, 14px, 30px);
   margin: 0;
-  padding-top: 10px;
+  padding-top: 11px;
 
   color: $blue;
 
@@ -113,41 +116,53 @@
   }
 }
 
-.reviews__prev,
-.reviews__next {
+.reviews__button {
   display: none;
 
   @include desktop {
     @include button-reset;
+    position: absolute;
+    top: 210px;
+
     display: block;
+    width: 30px;
+    height: 50px;
 
     font-size: 0;
 
     outline: none;
-    opacity: 0.3;
 
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.1;
+    &--next {
+      right: 0;
     }
   }
 }
 
-.reviews__prev::before {
-  @include pseudo($top: 225px, $left: 0);
-  width: 22px;
-  height: 46px;
+.reviews__button::before {
+  width: 30px;
+  height: 30px;
 
-  background: url("../img/icon-review-arrow-left.svg") no-repeat 0 0;
+  border-left: 2px solid rgba($blue, 0.3);
+  border-bottom: 2px solid rgba($blue, 0.3);
 }
 
-.reviews__next::before {
-  @include pseudo($top: 225px, $right: 0);
-  width: 22px;
-  height: 46px;
+.reviews__button--prev::before {
+  @include pseudo($top: 10px, $left: 10px);
+  transform: rotate(45deg);
+}
 
-  background: url("../img/icon-review-arrow-right.svg") no-repeat 0 0;
+.reviews__button--next::before {
+  @include pseudo($top: 10px, $right: 10px);
+  transform: rotate(-135deg);
+}
+
+.reviews__button:hover::before,
+.reviews__button:focus::before {
+  border-left: 2px solid rgba($blue, 0.6);
+  border-bottom: 2px solid rgba($blue, 0.6);
+}
+
+.reviews__button:active::before {
+  border-left: 2px solid rgba($blue, 0.1);
+  border-bottom: 2px solid rgba($blue, 0.1);
 }
