@@ -1,10 +1,39 @@
 .form-info {
-  margin: 0;
-  margin-top: 40px;
+  box-sizing: border-box;
+  margin-top: 35px;
   padding: 0 20px;
+
+  border: none;
 
   @include tablet {
     padding: 0;
+
+    &--name {
+      order: 1;
+      margin-top: 73px;
+    }
+
+    &--contact {
+      order: 3;
+      margin-top: 60px;
+      padding: 38px 58px 25px;
+
+      background-color: transparent;
+      border: 2px solid $grey;
+      border-radius: 3px;
+    }
+  }
+
+  @include desktop {
+    &--name {
+      width: 435px;
+      margin-top: 83px;
+    }
+
+    &--contact {
+      width: 100%;
+      padding: 35px 58px 20px;
+    }
   }
 }
 
@@ -14,14 +43,28 @@
   @include tablet {
     @include font(400, 14px, 18px);
     display: block;
-    margin: 0;
-    padding: 30px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0 35px;
 
     text-align: center;
     color: $pink;
     text-transform: uppercase;
 
     background-color: transparent;
+  }
+}
+
+.form-info__list {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    & .form-info__item {
+      width: 375px;
+    }
   }
 }
 
@@ -33,6 +76,49 @@
 
   &:last-child {
     padding: 0;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+
+    &--name {
+      flex-direction: row;
+      align-items: baseline;
+      padding-bottom: 54px;
+    }
+
+    &--contact {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      padding-bottom: 30px;
+    }
+  }
+
+  @include desktop {
+    &--contact {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.form-info__item--contact::after {
+  @include tablet {
+    @include pseudo($top: 0, $right: 0);
+    z-index: -1;
+
+    width: 60px;
+    height: 60px;
+
+    background: $grey url("../img/icon-phone.svg") no-repeat 50% 50%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.form-info__item--contact:last-child::after {
+  @include tablet {
+    background: $grey url("../img/icon-mail.svg") no-repeat 50% 50%;
   }
 }
 
@@ -46,8 +132,15 @@
   text-transform: uppercase;
 
   @include tablet {
-    padding: 0;
-    padding-right: 20px;
+    &--name {
+      padding: 0;
+      padding-right: 20px;
+    }
+
+    &--contact {
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -55,8 +148,8 @@
   @include font(400, 18px, 30px);
   box-sizing: border-box;
   width: 100%;
-  padding: 18px 20px;
-  padding-right: 70px;
+  height: 60px;
+  padding-left: 20px;
 
   font: inherit;
   color: $blue;
@@ -77,88 +170,17 @@
   &::placeholder {
     font-size: 18px;
     color: $blue;
+
+    opacity: 1;
   }
-}
-
-.form-info--name {
-  @include tablet {
-    order: 1;
-
-    & .form-info__item {
-      display: flex;
-      align-items: baseline;
-      padding-bottom: 55px;
-    }
-  }
-
-  @include desktop {
-    margin-top: 75px;
-    width: 435px;
-  }
-}
-
-.form-info--contact {
-  border: none;
 
   @include tablet {
-    order: 3;
-    padding: 0 60px;
-
-    background-color: transparent;
-    border: 2px solid $grey;
-    border-radius: 3px;
-
-    & .form-info__item {
-      display: flex;
-      flex-direction: column-reverse;
-      padding-bottom: 25px;
-    }
-
-    & .form-info__label {
-      padding-top: 10px;
-      padding-left: 20px;
+    &--contact {
+      padding-right: 70px;
     }
   }
-
-  @include desktop {
-    width: 100%;
-  }
 }
 
-.form-info__item--phone::after,
-.form-info__item--email::after {
-  @include desktop {
-    @include pseudo($top: 0, $right: 0);
-    z-index: -1;
-
-    width: 60px;
-    height: 58px;
-  }
-}
-
-.form-info__item--phone::after {
-  @include desktop {
-    background: $grey url("../img/icon-phone.svg") no-repeat 50% 50%;
-    border-radius: 3px;
-  }
-}
-
-.form-info__item--email::after {
-  @include desktop {
-    background: $grey url("../img/icon-mail.svg") no-repeat 50% 50%;
-    border-radius: 3px;
-  }
-}
-
-.form-info__list {
-  @include desktop {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-
-    & .form-info__item {
-      width: 375px;
-    }
-  }
+.form-info__input--error {
+  border: 2px solid $pink;
 }

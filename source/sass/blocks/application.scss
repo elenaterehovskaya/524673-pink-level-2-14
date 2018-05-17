@@ -1,4 +1,7 @@
 .application {
+  position: relative;
+  z-index: 10;
+
   padding: 462px 20px 0;
 
   text-align: center;
@@ -9,7 +12,7 @@
   }
 
   @include desktop {
-    padding: 215px 0 0;
+    padding: 220px 0 0;
   }
 }
 
@@ -37,8 +40,7 @@
   @include font(700, 18px, 18px);
   display: block;
   padding: 16px 0;
-  margin-top: 25px;
-  margin-bottom: 36px;
+  margin-top: 26px;
 
   color: $white;
   text-decoration: none;
@@ -61,12 +63,10 @@
   }
 
   @include tablet {
-    margin-bottom: 40px;
+    margin-top: 20px;
   }
 
   @include desktop {
-    margin-bottom: 70px;
-
     font-size: 21px;
   }
 }
@@ -74,36 +74,29 @@
 .application__list {
   @include list-reset;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 15px;
+}
+
+.application__item {
+  padding: 33px 17px 17px;
 
   @include tablet {
-    margin-bottom: 28px;
+    padding: 44px 17px 33px;
   }
 
   @include desktop {
-    width: 245px;
-    margin-bottom: 46px;
+    padding: 67px 17px 50px;
   }
 }
 
 .application__description {
   @include font(300, 14px, 24px);
   margin: 0;
-  padding-bottom: 30px;
 
   color: $white;
 
   @include tablet {
-    padding-bottom: 110px;
-
     font-size: 18px;
-  }
-
-  @include desktop {
-    padding-bottom: 120px;
   }
 }

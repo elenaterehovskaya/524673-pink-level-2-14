@@ -1,7 +1,6 @@
 .upload {
   width: 320px;
   margin: 0 auto;
-  padding-bottom: 30px;
 
   @include tablet {
     width: 660px;
@@ -9,6 +8,7 @@
 
   @include desktop {
     width: 940px;
+    margin-bottom: 25px;
   }
 }
 
@@ -16,21 +16,29 @@
   @include font(400, 14px, 30px);
   width: 280px;
   margin: 0 auto;
-  padding: 20px 0 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 
   text-align: center;
   color: $blue;
 
   @include tablet {
     width: 450px;
-    padding: 40px 0 60px;
+    padding-top: 45px;
+    padding-bottom: 70px;
 
     font-size: 18px;
+  }
+
+  @include desktop {
+    padding-top: 10px;
+    padding-bottom: 70px;
   }
 }
 
 .upload__photo {
-  padding: 20px 20px 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 
   background-color: $grey-light;
 
@@ -38,19 +46,24 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 60px 20px;
+    padding: 55px 20px;
   }
 
   @include desktop {
-    padding: 60px;
+    padding: 55px;
   }
 }
 
 .upload__image {
   display: block;
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0;
+  }
 
   @include desktop {
-    padding-left: 20px;
+    padding-left: 25px;
   }
 }
 
@@ -77,7 +90,7 @@
     border-bottom: 1px solid $grey;
 
     &::before {
-      @include pseudo($top: 140px, $right: 20px);
+      @include pseudo($top: 125px, $right: 40px);
       width: 240px;
       height: 2px;
 
@@ -85,7 +98,7 @@
     }
 
     &::after {
-      @include pseudo($top: 140px, $right: 60px);
+      @include pseudo($top: 125px, $right: 75px);
       width: 10px;
       height: 10px;
       margin-top: -6px;
@@ -102,7 +115,7 @@
   }
 
   @include tablet {
-    display: block;
+    margin-top: -15px;
   }
 }
 
@@ -110,13 +123,13 @@
   position: relative;
 
   height: 70px;
-  margin: 40px 40px 60px;
+  margin: 30px 43px 60px;
 
   border-bottom: 1px solid $grey;
 
   @include tablet {
     margin: 0;
-    margin-left: 20px;
+    margin-left: 25px;
 
     &::before {
       @include pseudo($top: 50%, $right: 20px);
@@ -143,7 +156,7 @@
     }
 
     &--contrast::after {
-      right: 120px;
+      right: 110px;
     }
 
     &:active::after {
@@ -156,9 +169,21 @@
     margin: 0;
 
     &::before {
-      right: 40px;
+      right: 35px;
 
       width: 288px;
+    }
+
+    &::after {
+      right: 235px;
+    }
+
+    &--fill::after {
+      right: 60px;
+    }
+
+    &--contrast::after {
+      right: 145px;
     }
   }
 }
@@ -218,7 +243,8 @@
 .upload__button {
   @include font(700, 18px, 18px);
   display: block;
-  width: 100%;
+  width: 280px;
+  margin: 0 auto;
   padding: 16px 0;
 
   text-decoration: none;
@@ -231,7 +257,7 @@
   transition: 0.3s ease-in-out;
 
   &--post {
-    margin-top: 35px;
+    margin-top: 38px;
 
     color: $pink;
 
@@ -274,9 +300,10 @@
   @include tablet {
     width: 260px;
     margin: 0 auto;
+    margin-right: 13px;
 
     &--post {
-      margin-top: 50px;
+      margin-top: 67px;
     }
 
     &--cancel {
@@ -287,6 +314,6 @@
   @include desktop {
     width: 185px;
     margin: 0;
-    margin-top: 135px;
+    margin-top: 145px;
   }
 }

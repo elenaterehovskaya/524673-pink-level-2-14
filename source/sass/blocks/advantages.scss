@@ -6,9 +6,13 @@
   @include font(300, 24px);
   width: 280px;
   margin: 0 auto;
-  padding-top: 36px;
+  padding-top: 40px;
 
   color: $blue;
+
+  &:last-of-type {
+    padding-top: 33px;
+  }
 
   @include tablet {
     width: 100%;
@@ -35,7 +39,7 @@
   background-size: cover;
 
   @include tablet {
-    margin-top: 35px;
+    margin-top: 45px;
   }
 
   @include desktop {

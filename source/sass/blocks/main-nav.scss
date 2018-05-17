@@ -1,16 +1,16 @@
 .main-nav {
   position: relative;
   z-index: 10;
+}
 
-  min-height: 67px;
-  margin-bottom: -67px;
+.main-nav__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
 
   background-color: rgba($black, 0.3);
-
-  @include tablet {
-    min-height: 111px;
-    margin-bottom: -111px;
-  }
 }
 
 .main-nav__wrapper {
@@ -20,19 +20,36 @@
     align-items: center;
     width: 940px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 0 10px;
+  }
+}
+
+.main-nav__logo {
+  box-sizing: border-box;
+  display: block;
+  min-height: 67px;
+  padding-top: 22px;
+  padding-left: 20px;
+
+  @include tablet {
+    min-height: 109px;
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+
+  @include desktop {
+    padding-top: 20px;
+    padding-left: 0;
   }
 }
 
 .main-nav__logo-icon {
   display: block;
   width: 75px;
-  height: auto;
-  padding: 24px 20px;
+
+  transition: 0.2s ease-in-out;
 
   fill: $white;
-
-  transition: 0.3s ease-in-out;
 
   &:hover {
     fill: $pink;
@@ -49,6 +66,7 @@
 
   @include tablet {
     width: 147px;
+    padding-top: 25px;
 
     &--tablet {
       display: block;
@@ -76,7 +94,6 @@
 }
 
 .main-nav__toggle {
-  @include button-reset;
   position: absolute;
   top: 10px;
   right: 20px;
@@ -86,10 +103,13 @@
 
   font-size: 0;
 
+  background-color: transparent;
+  border: none;
   outline: none;
+  cursor: pointer;
 
   @include tablet {
-    top: 20px;
+    top: 30px;
   }
 
   @include desktop {
@@ -119,7 +139,7 @@
 
   background-color: $white;
 
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .main-nav--opened .main-nav__toggle::before {
@@ -140,18 +160,9 @@
   opacity: 0.3;
 }
 
-.main-nav--closed .site-list__link {
+.main-nav--closed .site-list__item {
   @include mobile-tablet {
     display: none;
-  }
-}
-
-.main-nav--opened .main-nav__logo {
-  @include mobile-tablet {
-    display: block;
-
-    background-color: $blue;
-    border-bottom: 1px solid $black;
   }
 }
 
@@ -161,14 +172,28 @@
   }
 }
 
-.main-nav--nojs .main-nav__wrapper {
+.main-nav--nojs .site-list__item {
   @include mobile-tablet {
-    position: static;
+    display: block;
   }
 }
 
-.main-nav--nojs .site-list__link {
+.main-nav--nojs .main-nav__container {
   @include mobile-tablet {
-    display: block;
+    position: static;
+
+    height: 258px;
+
+    background-color: $blue;
+  }
+}
+
+.main-nav--opened .main-nav__container {
+  @include mobile-tablet {
+    position: static;
+
+    height: 258px;
+
+    background-color: $blue;
   }
 }

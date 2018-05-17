@@ -1,5 +1,5 @@
 .form-report {
-  margin: 0;
+  box-sizing: border-box;
   margin-top: 40px;
   padding: 0;
 
@@ -7,15 +7,45 @@
   background-color: $grey-light;
 
   @include tablet {
+    margin-top: 60px;
+    padding: 55px 55px 60px;
+
     background-color: transparent;
     border: 2px solid $grey;
+
+    &--application {
+      order: 2;
+    }
+
+    &--progress {
+      order: 4;
+    }
+  }
+
+  @include desktop {
+    margin-top: 0;
+
+    background-color: transparent;
+    border: 2px solid $grey;
+
+    &--application {
+      width: 435px;
+      margin-top: 73px;
+      padding: 50px 0 63px;
+    }
+
+    &--progress {
+      margin-top: 53px;
+      padding: 50px 55px;
+    }
   }
 }
 
 .form-report__caption {
   @include font(400, 14px, 18px);
-  margin: 0;
-  padding: 30px;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 40px 40px 50px;
 
   text-align: center;
   color: $pink;
@@ -24,6 +54,8 @@
   background-color: $grey-light;
 
   @include tablet {
+    padding: 0 30px;
+
     background-color: transparent;
   }
 }
@@ -32,43 +64,91 @@
   @include list-reset;
 }
 
+.form-report__list--progress {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 820px;
+    height: 120px;
+  }
+}
+
 .form-report__item {
-  margin-bottom: 60px;
+  margin-bottom: 62px;
+
+  &:last-child {
+    margin-bottom: 50px;
+  }
+
+  &--application {
+    margin-bottom: 55px;
+  }
+
+  @include tablet {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--application {
+      margin-bottom: 55px;
+    }
+
+    &--progress {
+      margin-bottom: 62px;
+    }
+  }
+
+  @include desktop {
+    &--application {
+      margin-left: 75px;
+    }
+
+    &--progress {
+      width: (100% / 3);
+      margin-right: 35px;
+    }
+
+    &--progress:nth-child(2n) {
+      margin: 0;
+    }
+  }
 }
 
 .form-report__label {
   position: relative;
 
   display: block;
-  padding-left: 90px;
+  padding-left: 88px;
 
   font: inherit;
   font-size: 18px;
   color: $blue;
 
   cursor: pointer;
+
+  @include tablet {
+    padding-left: 60px;
+  }
 }
 
 .form-report__input--checkbox + .form-report__label::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 20px;
-
+  @include pseudo($top: -10px, $left: 20px);
   width: 35px;
   height: 35px;
 
   background-color: $white;
   border: 2px solid $grey;
   border-radius: 3px;
+
+  @include tablet {
+    left: 0;
+  }
 }
 
 .form-report__input--checkbox:checked + .form-report__label::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 30px;
-
+  @include pseudo($top: 0, $left: 28px);
   width: 21px;
   height: 8px;
 
@@ -76,33 +156,37 @@
   border-bottom: 2px solid $pink;
 
   transform: rotate(-45deg);
+
+  @include tablet {
+    left: 10px;
+  }
 }
 
 .form-report__input--radio + .form-report__label::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 20px;
-
+  @include pseudo($top: -10px, $left: 20px);
   width: 36px;
   height: 36px;
 
   background-color: $white;
   border: 2px solid $grey;
   border-radius: 50%;
+
+  @include tablet {
+    left: 0;
+  }
 }
 
 .form-report__input--radio:checked + .form-report__label::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 32px;
-
+  @include pseudo($top: 2px, $left: 32px);
   width: 16px;
   height: 16px;
 
   background-color: $pink;
   border-radius: 50%;
+
+  @include tablet {
+    left: 12px;
+  }
 }
 
 .form-report__input--radio:hover + .form-report__label::before,
@@ -113,38 +197,4 @@
 .form-report__input--radio:focus + .form-report__label::before,
 .form-report__input--checkbox:focus + .form-report__label::before {
   border: 2px solid $pink;
-}
-
-.form-report--progress {
-  @include tablet {
-    order: 4;
-    padding: 0 60px;
-  }
-
-  @include desktop {
-    width: 100%;
-
-    & .form-report__list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      height: 200px;
-    }
-
-    & .form-report__item {
-      width: (100% / 3);
-    }
-  }
-}
-
-.form-report--application {
-  @include tablet {
-    order: 2;
-  }
-
-  @include desktop {
-    margin-top: 35px;
-    width: 435px;
-  }
 }
