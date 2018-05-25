@@ -85,7 +85,7 @@
     position: relative;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 
     border-bottom: 1px solid $grey;
 
@@ -123,13 +123,13 @@
   position: relative;
 
   height: 70px;
-  margin: 30px 43px 60px;
-
-  border-bottom: 1px solid $grey;
+  margin: 30px 10px 60px;
 
   @include tablet {
     margin: 0;
-    margin-left: 25px;
+    margin-left: 30px;
+
+    border-bottom: 1px solid $grey;
 
     &::before {
       @include pseudo($top: 50%, $right: 20px);
@@ -183,29 +183,42 @@
     }
 
     &--contrast::after {
-      right: 145px;
+      right: 150px;
     }
   }
 }
 
 .upload__filter-button {
-  position: absolute;
+  position: relative;
 
-  top: 0;
-  left: 0;
+  top: 5px;
+  left: -5px;
 
-  width: 48px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 
   font-size: 0;
 
-  background: none;
+  background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+
+  @include tablet-only {
+    top: 15px;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .upload__filter-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   fill: $pink;
 
   &--fill,
@@ -213,19 +226,15 @@
     fill: rgba($blue, 0.3);
   }
 
-  &:hover {
-    fill: rgba($blue, 0.5);
-  }
-
   @include tablet {
-    width: 70%;
+    width: 65%;
 
     &--fill {
       fill: $pink;
     }
 
     &--contrast {
-      width: 50%;
+      width: 45%;
 
       fill: $pink;
     }
@@ -233,11 +242,11 @@
 
   @include desktop {
     width: auto;
-
-    &--contrast {
-      margin-left: 7px;
-    }
   }
+}
+
+.upload__filter-button:hover .upload__filter-icon {
+  fill: rgba($blue, 0.5);
 }
 
 .upload__button {

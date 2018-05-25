@@ -36,7 +36,6 @@
   margin-top: 25px;
 
   background: $grey-light url("../img/bg-triangle-white.svg") no-repeat 100% 0;
-  background-size: cover;
 
   @include tablet {
     margin-top: 45px;
@@ -44,6 +43,8 @@
 
   @include desktop {
     margin-top: 75px;
+
+    background-size: cover;
   }
 }
 
