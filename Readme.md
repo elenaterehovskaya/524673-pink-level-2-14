@@ -25,9 +25,9 @@
 ---
 
 <p>
-  <img width="285" alt="Главная страница-desktop «Пинк»" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-index-desktop.jpg">
-  <img valign="top" width="285" alt="Страница-desktop с фотографиями пользователей" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-photo-desktop.jpg">
-  <img valign="top" width="285" alt="Страница-desktop с формой" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-form-desktop.jpg">
+  <img width="288" alt="Главная страница-desktop «Пинк»" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-index-desktop.jpg">
+  <img valign="top" width="288" alt="Страница-desktop с фотографиями пользователей" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-photo-desktop.jpg">
+  <img valign="top" width="288" alt="Страница-desktop с формой" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-form-desktop.jpg">
 </p>
 
 ---
@@ -41,7 +41,7 @@
 ---
 
 <p>
-  <img width="250" alt="Главная страница-mobile «Пинк»" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-index-mobile.jpg">
+  <img width="225" alt="Главная страница-mobile «Пинк»" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-index-mobile.jpg">
   <img valign="top" width="225" alt="Страница-mobile с фотографиями пользователей" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-photo-mobile.jpg">
   <img valign="top" width="225" alt="Страница-mobile с формой" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-form-mobile.jpg">
 </p>
