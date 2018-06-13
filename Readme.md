@@ -1,4 +1,4 @@
-# Проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Проект «Пинк»
 
 * Вёрстка: [Елена Тереховская](https://github.com/elenaterehovskaya).
 * Макет: [HTML Academy](https://htmlacademy.ru).
@@ -25,9 +25,9 @@
 ---
 
 <p>
-  <img width="250" alt="Главная страница-desktop «Пинк»" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-index-desktop.jpg">
-  <img valign="top" width="250" alt="Страница-desktop с фотографиями пользователей" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-photo-desktop.jpg">
-  <img valign="top" width="250" alt="Страница-desktop с формой" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-form-desktop.jpg">
+  <img width="285" alt="Главная страница-desktop «Пинк»" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-index-desktop.jpg">
+  <img valign="top" width="285" alt="Страница-desktop с фотографиями пользователей" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-photo-desktop.jpg">
+  <img valign="top" width="285" alt="Страница-desktop с формой" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-form-desktop.jpg">
 </p>
 
 ---
@@ -42,8 +42,8 @@
 
 <p>
   <img width="250" alt="Главная страница-mobile «Пинк»" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-index-mobile.jpg">
-  <img valign="top" width="250" alt="Страница-mobile с фотографиями пользователей" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-photo-mobile.jpg">
-  <img valign="top" width="250" alt="Страница-mobile с формой" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-form-mobile.jpg">
+  <img valign="top" width="225" alt="Страница-mobile с фотографиями пользователей" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-photo-mobile.jpg">
+  <img valign="top" width="225" alt="Страница-mobile с формой" src="https://github.com/elenaterehovskaya/elenaterehovskaya.github.io/blob/master/img/pink-form-mobile.jpg">
 </p>
 
 ---
@@ -51,8 +51,3 @@
 <a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
 
 Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Профессиональный HTML и CSS](https://htmlacademy.ru/intensive/adaptive)», уровень 2 от [HTML Academy](https://htmlacademy.ru).
-
-[travis-image]: https://travis-ci.org/htmlacademy-adaptive/524673-pink.svg?branch=master
-[travis-url]: https://travis-ci.org/htmlacademy-adaptive/524673-pink
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/524673-pink/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/524673-pink?type=dev
